@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>이미르 · Portfolio</title>
+<style>
+@font-face{font-family:"NotoKR";font-weight:400;src:url(fonts/noto-sans-kr-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212}
+@font-face{font-family:"NotoKR";font-weight:500;src:url(fonts/noto-sans-kr-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212}
+@font-face{font-family:"NotoKR";font-weight:700;src:url(fonts/noto-sans-kr-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212}
+@font-face{font-family:"NotoKR";font-weight:400;src:url(fonts/noto-sans-kr-korean-400-normal.woff2) format("woff2")}
+@font-face{font-family:"NotoKR";font-weight:500;src:url(fonts/noto-sans-kr-korean-500-normal.woff2) format("woff2")}
+@font-face{font-family:"NotoKR";font-weight:700;src:url(fonts/noto-sans-kr-korean-700-normal.woff2) format("woff2")}
+
+:root{
+  --p:#3B5BFD; --p2:#2A44D8; --ps:#EEF1FF; --pl:#D9E0FF;
+  --s:#12B5A4; --ss:#E5F7F5; --sl:#BFEBE5;
+  --ink:#1C2232; --sub:#5E6878; --mute:#98A1AE;
+  --bg:#F6F7FA; --line:#E4E7EE; --white:#fff;
+  --shadow:0 4px 18px rgba(28,34,50,.07);
+}
+@page{size:1280px 720px;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff}
+body{font-family:"NotoKR",sans-serif;color:var(--ink);font-size:16px;line-height:1.55;word-break:keep-all;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.slide{width:1280px;height:720px;position:relative;overflow:hidden;padding:52px 64px 0;background:#fff;page-break-after:always}
+.slide:last-child{page-break-after:auto}
+
+/* header */
+.hd{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.tag{display:inline-flex;align-items:center;gap:8px;background:var(--ps);color:var(--p);font-weight:700;font-size:12px;letter-spacing:.06em;padding:5px 12px;border-radius:999px}
+.tag b{background:var(--p);color:#fff;border-radius:999px;padding:0 7px;font-size:11px}
+.crumb{color:var(--mute);font-size:12.5px;font-weight:500}
+h2{font-size:30px;line-height:1.38;margin:0;font-weight:700;letter-spacing:-.01em}
+h2 em{font-style:normal;color:var(--p)}
+.lead{color:var(--sub);font-size:16.5px;margin:8px 0 0}
+.body{margin-top:34px}
+.foot{position:absolute;left:64px;right:64px;bottom:22px;display:flex;align-items:center;gap:14px;font-size:11px;color:var(--mute)}
+.foot .ln{flex:1;height:1px;background:var(--line)}
+.foot .pg{font-weight:700;color:var(--ink)}
+
+/* utilities */
+.row{display:flex;gap:20px}
+.col{flex:1;min-width:0}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:22px 24px}
+.soft{background:var(--bg);border-radius:14px;padding:18px 20px}
+.pbox{background:var(--ps);border-radius:14px;padding:18px 20px}
+.sbox{background:var(--ss);border-radius:14px;padding:18px 20px}
+.p{color:var(--p)} .s{color:var(--s)} .b{font-weight:700} .m{font-weight:500}
+.sub{color:var(--sub)} .mute{color:var(--mute)}
+.sm{font-size:14.5px} .xs{font-size:13px}
+.label{font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--mute);margin-bottom:6px}
+.chip{display:inline-block;font-size:13px;font-weight:500;padding:3px 10px;border-radius:999px;background:var(--bg);color:var(--ink);margin:0 4px 6px 0;border:1px solid var(--line)}
+.chip.p{background:var(--ps);color:var(--p2);border-color:var(--pl)}
+.chip.s{background:var(--ss);color:#0c8a7d;border-color:var(--sl)}
+.dot{display:inline-flex;width:30px;height:30px;border-radius:50%;align-items:center;justify-content:center;font-weight:700;font-size:12px;background:var(--p);color:#fff;flex:none}
+.dot.s{background:var(--s)}
+.dot.o{background:#fff;color:var(--p);border:1.5px solid var(--pl)}
+ul.l{margin:0;padding:0;list-style:none}
+ul.l li{position:relative;padding-left:16px;margin:9px 0;font-size:15px}
+ul.l li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--p)}
+ul.l.s li::before{background:var(--s)}
+.arrow{display:flex;align-items:center;justify-content:center;color:var(--mute);font-size:22px;flex:none}
+.big{font-size:44px;font-weight:700;line-height:1;letter-spacing:-.02em}
+.kv{display:flex;gap:10px;margin:9px 0;font-size:15px}
+.kv .k{width:70px;flex:none;color:var(--mute);font-weight:500}
+.prs{display:flex;flex-direction:column;gap:14px}
+.prs .it{display:flex;gap:14px;align-items:flex-start}
+.prs .it .t{font-weight:700;font-size:14px;width:56px;flex:none;padding-top:2px}
+.prs .it .d{font-size:15px}
+.bar-top{height:5px;border-radius:16px 16px 0 0;margin:-24px -20px 18px}
+</style>
+</head>
+<body>
+
+<!-- 01 COVER -->
+<section class="slide" style="padding:0">
+  <div style="position:absolute;right:-120px;top:-140px;width:620px;height:620px;border-radius:50%;background:var(--ps)"></div>
+  <div style="position:absolute;right:-90px;bottom:-150px;width:360px;height:360px;border-radius:50%;background:var(--ss)"></div><div style="position:absolute;left:0;right:0;bottom:0;height:8px;background:linear-gradient(90deg,var(--p),var(--s))"></div>
+  <div style="position:absolute;left:72px;top:70px;right:620px">
+    <div class="tag">PORTFOLIO 2026</div>
+    <div style="font-size:46px;font-weight:700;line-height:1.3;margin-top:30px;letter-spacing:-.02em">기획부터 운영까지,<br>현장에서 <span class="p">끝까지 동작하는</span><br>서비스를 만듭니다</div>
+    <div class="sub" style="font-size:17px;margin-top:22px">웹 서비스 구현 · AI 업무 연동 · 금융권 시스템 운영</div>
+    <div style="width:64px;height:4px;background:var(--s);border-radius:4px;margin:44px 0 22px"></div>
+    <div style="font-size:30px;font-weight:700">이미르 <span class="mute" style="font-size:15px;font-weight:500;margin-left:6px">LEE MI R</span></div>
+    <div class="sub sm" style="margin-top:8px">mileui73@gmail.com &nbsp;·&nbsp; 010-4850-5772 &nbsp;·&nbsp; github.com/lalala5772</div>
+  </div>
+  <div style="position:absolute;right:96px;top:150px;width:420px;display:flex;flex-direction:column;gap:16px">
+    <div class="card" style="display:flex;gap:16px;align-items:center;padding:20px 22px"><span class="dot">01</span><div><div class="b" style="font-size:17px">Build</div><div class="sub sm">서비스를 처음부터 끝까지 구현합니다</div></div></div>
+    <div class="card" style="display:flex;gap:16px;align-items:center;padding:20px 22px;margin-left:40px"><span class="dot s">02</span><div><div class="b" style="font-size:17px">Connect</div><div class="sub sm">현장의 업무를 AI와 연결합니다</div></div></div>
+    <div class="card" style="display:flex;gap:16px;align-items:center;padding:20px 22px"><span class="dot">03</span><div><div class="b" style="font-size:17px">Operate</div><div class="sub sm">운영 중인 시스템을 안정적으로 지킵니다</div></div></div>
+  </div>
+</section>
+
+<!-- 02 PROFILE -->
+<section class="slide">
+  <div class="hd"><span class="tag">PROFILE</span></div>
+  <h2>기초 원리에서 출발해 <em>원인을 끝까지 확인</em>하는 사람입니다</h2>
+  <p class="lead">웹 서비스를 직접 만들고, AI를 실제 업무에 연결하고, 운영 중인 금융권 시스템을 유지보수하고 있습니다.</p>
+  <div class="row body" style="gap:24px">
+    <div class="card" style="width:340px;padding:22px">
+      <div style="display:flex;gap:16px;align-items:center">
+        <img src="photo.jpg" style="width:84px;height:108px;object-fit:cover;border-radius:10px">
+        <div><div class="b" style="font-size:22px">이미르</div><div class="sub sm">2000. 03. 30.</div></div>
+      </div>
+      <div style="height:1px;background:var(--line);margin:16px 0 10px"></div>
+      <div class="kv"><span class="k">Email</span><span>mileui73@gmail.com</span></div>
+      <div class="kv"><span class="k">Mobile</span><span>010-4850-5772</span></div>
+      <div class="kv"><span class="k">GitHub</span><span class="p">github.com/lalala5772</span></div>
+      <div class="kv"><span class="k">학력</span><span>전북대학교 IT정보공학과 학사 졸업<br><span class="sub xs">2019.03 – 2024.02 · 학점 3.35 / 4.5</span></span></div>
+      <div class="kv"><span class="k">자격</span><span>SQLD · OPIc IM2</span></div>
+    </div>
+    <div class="col">
+      <div class="label">AT A GLANCE</div>
+      <div class="row" style="gap:14px">
+        <div class="card col"><div class="big p">85<span style="font-size:24px">%</span></div><div class="b sm" style="margin-top:10px">LLM 판정 배치 실행 시간 단축</div><div class="sub xs">88초 → 13초 (I/O 병목 병렬화)</div></div>
+        <div class="card col"><div class="big s">3<span style="font-size:24px">곳</span></div><div class="b sm" style="margin-top:10px">실무 경험 기업</div><div class="sub xs">공공 SI · 스타트업 · 스마트팜</div></div>
+        <div class="card col"><div class="big p">4<span style="font-size:24px">회</span></div><div class="b sm" style="margin-top:10px">프로젝트 · 경진대회 수상</div><div class="sub xs">KDT 최우수상 · 캡스톤 우수상 등</div></div>
+      </div>
+      <div class="label" style="margin-top:22px">KEYWORDS</div>
+      <div>
+        <span class="chip p">Java · Spring</span><span class="chip p">전자정부프레임워크</span><span class="chip p">Tibero</span><span class="chip p">JSP · MyBatis</span>
+        <span class="chip s">LLM 연동</span><span class="chip s">RAG</span><span class="chip s">Python · FastAPI</span>
+        <span class="chip">React</span><span class="chip">운영 · 유지보수</span><span class="chip">SSL · 웹 접근성</span><span class="chip">JENNIFER</span>
+      </div>
+      <div class="soft sm" style="margin-top:12px;line-height:1.7">현재 <b>금융위원회 금융정보분석원(FIU)</b> 정보시스템의 유지보수·운영을 맡아 기능 개선, 인증·보안 대응, 형상관리 기반 배포를 수행하고 있습니다.</div>
+    </div>
+  </div>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">02</span></div>
+</section>
+
+<!-- 03 CONTENTS -->
+<section class="slide">
+  <div class="hd"><span class="tag">CONTENTS</span></div>
+  <h2>이 포트폴리오는 <em>다섯 단계</em>로 구성되어 있습니다</h2>
+  <p class="lead">흐름과 강점을 먼저 보여드리고, 이를 뒷받침하는 실무 사례와 프로젝트를 이어서 설명합니다.</p>
+  <div class="row body" style="gap:16px;margin-top:40px">
+    <div class="card col" style="padding:24px 22px;min-height:360px"><div class="bar-top" style="background:var(--p)"></div><div class="big p" style="font-size:38px">01</div><div class="b" style="font-size:18px;margin-top:14px">Career</div><div class="sub sm" style="margin-top:4px">성장 흐름</div><div class="sm" style="margin-top:16px">학업부터 현재 업무까지 어떤 순서로 경험을 넓혀왔는지</div><div class="mute xs" style="margin-top:14px">p.04</div></div>
+    <div class="card col" style="padding:24px 22px;min-height:360px"><div class="bar-top" style="background:var(--s)"></div><div class="big s" style="font-size:38px">02</div><div class="b" style="font-size:18px;margin-top:14px">Strength</div><div class="sub sm" style="margin-top:4px">세 가지 강점</div><div class="sm" style="margin-top:16px">Build · Connect · Operate로 정리한 핵심 역량</div><div class="mute xs" style="margin-top:14px">p.05</div></div>
+    <div class="card col" style="padding:24px 22px;min-height:360px"><div class="bar-top" style="background:var(--p)"></div><div class="big p" style="font-size:38px">03</div><div class="b" style="font-size:18px;margin-top:14px">Work</div><div class="sub sm" style="margin-top:4px">실무 사례</div><div class="sm" style="margin-top:16px">금융권 시스템 운영과 LLM 업무 자동화 사례</div><div class="mute xs" style="margin-top:14px">p.06 – 12</div></div>
+    <div class="card col" style="padding:24px 22px;min-height:360px"><div class="bar-top" style="background:var(--s)"></div><div class="big s" style="font-size:38px">04</div><div class="b" style="font-size:18px;margin-top:14px">Project</div><div class="sub sm" style="margin-top:4px">프로젝트</div><div class="sm" style="margin-top:16px">풀스택 서비스, RAG 챗봇, 데이터 수집 시스템</div><div class="mute xs" style="margin-top:14px">p.13 – 15</div></div>
+    <div class="card col" style="padding:24px 22px;min-height:360px"><div class="bar-top" style="background:var(--p)"></div><div class="big p" style="font-size:38px">05</div><div class="b" style="font-size:18px;margin-top:14px">More</div><div class="sub sm" style="margin-top:4px">기술 · 학력 · 수상</div><div class="sm" style="margin-top:16px">사용 기술과 학력, 수상, 자격 그리고 일하는 방식</div><div class="mute xs" style="margin-top:14px">p.16 – 18</div></div>
+  </div>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">03</span></div>
+</section>
+
+<!-- 04 CAREER -->
+<section class="slide">
+  <div class="hd"><span class="tag"><b>01</b>CAREER</span></div>
+  <h2>데이터를 모으는 일에서 시작해, 서비스를 만들고<br><em>AI를 연결하고 운영하는 일</em>까지 경험을 넓혀왔습니다</h2>
+  <div class="body" style="margin-top:34px">
+    <div class="row" style="gap:12px">
+      <div class="col" style="flex:3"><div class="soft" style="padding:10px 16px;background:var(--bg)"><div class="b">STEP 1 · 기초</div><div class="sub xs">학업과 데이터 수집</div></div></div>
+      <div class="col" style="flex:1"><div class="sbox" style="padding:10px 16px"><div class="b s">STEP 2 · 구현</div><div class="sub xs">팀 프로젝트</div></div></div>
+      <div class="col" style="flex:2"><div class="pbox" style="padding:10px 16px"><div class="b p">STEP 3 · 연결과 운영</div><div class="sub xs">AI 업무 연동 · 금융권 시스템 운영</div></div></div>
+    </div>
+    <div style="position:relative;margin-top:40px;height:4px;background:linear-gradient(90deg,#d6dae2 0%,#d6dae2 46%,var(--s) 50%,var(--s) 63%,var(--p) 67%,var(--p) 100%);border-radius:4px"></div>
+    <div class="row" style="gap:12px;margin-top:-15px">
+      <div class="tl"><span class="nd g"></span><div class="yr">2019.03 – 2024.02</div><div class="tt">전북대학교</div><div class="dd">IT정보공학과 학사 졸업<br>학점 3.35 / 4.5</div></div>
+      <div class="tl"><span class="nd g"></span><div class="yr">2023.03 – 2023.12</div><div class="tt">셈스게임즈</div><div class="dd">데이터 관리·개발 인턴<br>IoT 센서 데이터 수집 대시보드</div></div>
+      <div class="tl"><span class="nd g"></span><div class="yr">2023.09 – 2023.12</div><div class="tt">SW캡스톤디자인</div><div class="dd">시맨틱 위치정보 추정<br><span class="s m">우수상</span></div></div>
+      <div class="tl"><span class="nd sc"></span><div class="yr">2024.11 – 2025.05</div><div class="tt">KDT 풀스택 과정</div><div class="dd">Spring Boot · React 서비스 2건<br><span class="s m">최우수상</span></div></div>
+      <div class="tl"><span class="nd pc"></span><div class="yr">2026.05 – 2026.07</div><div class="tt">올림플래닛</div><div class="dd">사업운영 프로<br>LLM 입찰공고 판정 시스템</div></div>
+      <div class="tl now"><span class="nd pc"></span><div class="yr">2026.09 – 현재</div><div class="tt">올포랜드</div><div class="dd">개발직군 인턴<br>금융정보분석원(FIU) 시스템 운영</div></div>
+    </div>
+    <div class="row" style="gap:12px;margin-top:26px">
+      <div class="col" style="flex:3"><div class="soft sm" style="height:100%"><div class="label">WHAT I LEARNED</div>센서 데이터 누락을 프로세스 분리로 해결하며, 현상보다 <b>원리부터 확인</b>하는 습관을 만들었습니다</div></div>
+      <div class="col" style="flex:1"><div class="sbox sm" style="height:100%"><div class="label s">WHAT I LEARNED</div>인증부터 화면까지 <b>서비스 전체 흐름</b>을 직접 구현했습니다</div></div>
+      <div class="col" style="flex:2"><div class="pbox sm" style="height:100%"><div class="label p">WHAT I LEARNED</div>현업 요구를 기술 요건으로 옮기고, <b>운영 통제 안에서</b> 안정적으로 반영하는 법을 배우고 있습니다</div></div>
+    </div>
+  </div>
+  <style>
+  .tl{flex:1;position:relative;padding-top:30px}
+  .tl .nd{position:absolute;top:0;left:0;width:26px;height:26px;border-radius:50%;background:#fff;border:5px solid #c9ced8}
+  .tl .nd.sc{border-color:var(--s)} .tl .nd.pc{border-color:var(--p)}
+  .tl.now .nd{background:var(--p)}
+  .tl .yr{font-size:12px;color:var(--mute);font-weight:500}
+  .tl .tt{font-size:17px;font-weight:700;margin:2px 0 6px}
+  .tl .dd{font-size:13px;color:var(--sub);line-height:1.6}
+  .tl.now{background:var(--ps);border-radius:14px;padding:30px 14px 14px;margin-top:-6px}
+  .tl.now .nd{left:14px;top:6px}
+  .tl.now{padding-top:40px}
+  </style>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">04</span></div>
+</section>
+
+<!-- 05 STRENGTH -->
+<section class="slide">
+  <div class="hd"><span class="tag"><b>02</b>STRENGTH</span></div>
+  <h2>만들고, 연결하고, 지키는 <em>세 가지 강점</em>을 실무와 프로젝트로 증명했습니다</h2>
+  <div class="row body" style="gap:18px">
+    <div class="card col" style="padding:0;overflow:hidden">
+      <div style="background:var(--p);color:#fff;padding:18px 22px"><div class="xs" style="opacity:.8;font-weight:700;letter-spacing:.08em">01 · BUILD</div><div class="b" style="font-size:19px;margin-top:2px">서비스를 처음부터 끝까지</div></div>
+      <div style="padding:18px 22px"><ul class="l">
+        <li>Spring Boot · React 기반 서비스 2건 팀 구현</li>
+        <li>OAuth2 · JWT 인증, 토큰 분리와 블랙리스트</li>
+        <li>WebRTC 실시간 화상회의, 시그널링 서버</li>
+        <li>@Transactional 기반 예약 동시성 제어</li></ul>
+        <div class="pbox sm" style="margin-top:14px;padding:12px 16px"><b class="p">대표 성과</b> KDT 풀스택 프로젝트 최우수상</div>
+      </div>
+    </div>
+    <div class="card col" style="padding:0;overflow:hidden">
+      <div style="background:var(--s);color:#fff;padding:18px 22px"><div class="xs" style="opacity:.85;font-weight:700;letter-spacing:.08em">02 · CONNECT</div><div class="b" style="font-size:19px;margin-top:2px">현장의 업무를 AI와 연결</div></div>
+      <div style="padding:18px 22px"><ul class="l s">
+        <li>반복 업무를 기술 요건으로 정리해 LLM 판정 시스템 구축·운영</li>
+        <li>I/O 병목 진단 후 병렬화로 실행 시간 단축</li>
+        <li>BM25 + Dense 하이브리드 검색 RAG 챗봇</li>
+        <li>DPR 학습 데이터 직접 구축, SBERT 파인튜닝</li></ul>
+        <div class="sbox sm" style="margin-top:14px;padding:12px 16px"><b class="s">대표 성과</b> 실행 시간 88초 → 13초 (85% 단축)</div>
+      </div>
+    </div>
+    <div class="card col" style="padding:0;overflow:hidden">
+      <div style="background:var(--ink);color:#fff;padding:18px 22px"><div class="xs" style="opacity:.7;font-weight:700;letter-spacing:.08em">03 · OPERATE</div><div class="b" style="font-size:19px;margin-top:2px">운영 중인 시스템을 안정적으로</div></div>
+      <div style="padding:18px 22px"><ul class="l">
+        <li>금융정보분석원(FIU) 정보시스템 유지보수·운영</li>
+        <li>대민 게시판 서버 페이징 전환 (Tibero)</li>
+        <li>SSL 인증서 교체 · 웹 접근성(WA) 인증 대응</li>
+        <li>JENNIFER 점검, SR 처리, 형상관리 기반 배포</li></ul>
+        <div class="soft sm" style="margin-top:14px;padding:12px 16px"><b>대표 성과</b> 금융권 운영 통제 절차 내 개선·배포</div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="gap:10px;margin-top:20px;align-items:center">
+    <span class="b sm" style="width:90px">일하는 방식</span>
+    <div class="soft sm col" style="padding:10px 16px"><b class="p">원리부터 확인</b> — 현상보다 원인을 먼저 찾습니다</div>
+    <div class="soft sm col" style="padding:10px 16px"><b class="p">현업과 직접 소통</b> — 요구를 직접 듣고 조율합니다</div>
+    <div class="soft sm col" style="padding:10px 16px"><b class="p">문서로 공유</b> — 배운 것을 팀의 자산으로 남깁니다</div>
+  </div>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">05</span></div>
+</section>
+
+<!-- 06 WORK 1 OVERVIEW -->
+<section class="slide">
+  <div class="hd"><span class="tag"><b>03</b>WORK</span><span class="crumb">Case 1 · 올포랜드 — 금융정보분석원 정보시스템 운영</span></div>
+  <h2>금융위원회 금융정보분석원(FIU)의 <em>대민·관리자 포털</em>을<br>유지보수하며 개선, 인증 대응, 배포까지 담당하고 있습니다</h2>
+  <div class="row body" style="gap:22px">
+    <div class="card" style="width:330px">
+      <div class="label">OVERVIEW</div>
+      <div class="kv"><span class="k">회사</span><span class="b">올포랜드 (All4land)</span></div>
+      <div class="kv"><span class="k">기간</span><span>2026.09 – 현재</span></div>
+      <div class="kv"><span class="k">역할</span><span>개발직군 인턴 (SD본부 FIU)</span></div>
+      <div class="kv"><span class="k">고객</span><span>금융위원회 금융정보분석원</span></div>
+      <div class="kv"><span class="k">대상</span><span>전자정부프레임워크 기반<br>대민 · 관리자 포털</span></div>
+      <div style="height:1px;background:var(--line);margin:12px 0"></div>
+      <div class="label">STACK</div>
+      <span class="chip p">Spring</span><span class="chip p">JSP</span><span class="chip p">MyBatis</span><span class="chip p">Tibero</span><span class="chip s">JENNIFER</span><span class="chip s">SoftManager</span><span class="chip">Linux</span>
+    </div>
+    <div class="col">
+      <div class="label">WORK MAP — 담당 업무 6가지</div>
+      <div class="wm">
+        <div class="w hi"><span class="dot">1</span><div><div class="b">기능 개선</div><div class="sub sm">대민 게시판 서버 페이징 전환</div><div class="mute xs">p.07</div></div></div>
+        <div class="w hi"><span class="dot">2</span><div><div class="b">인증 대응</div><div class="sub sm">SSL 인증서 교체 · 웹 접근성(WA) 인증</div><div class="mute xs">p.08</div></div></div>
+        <div class="w"><span class="dot o">3</span><div><div class="b">보안 조치</div><div class="sub sm">웹 취약점 조치 · DB 계정·권한 정비</div></div></div>
+        <div class="w"><span class="dot o">4</span><div><div class="b">SR 처리 · 배포</div><div class="sub sm">주무관 요구 협의 → 개발 → 배포 조율</div><div class="mute xs">p.09</div></div></div>
+        <div class="w"><span class="dot o">5</span><div><div class="b">일일 점검</div><div class="sub sm">서버 리소스 · JENNIFER 트랜잭션 확인</div></div></div>
+        <div class="w"><span class="dot o">6</span><div><div class="b">품질 관리</div><div class="sub sm">코드리뷰 체크리스트 · 가이드 문서화</div></div></div>
+      </div>
+    </div>
+  </div>
+  <style>.wm{display:grid;grid-template-columns:1fr 1fr;gap:12px}.w{display:flex;gap:14px;align-items:flex-start;background:var(--bg);border-radius:14px;padding:18px 18px;min-height:112px}.w.hi{background:var(--ps)}</style>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">06</span></div>
+</section>
+
+<!-- 07 WORK 1-1 PAGING -->
+<section class="slide">
+  <div class="hd"><span class="tag"><b>03</b>WORK</span><span class="crumb">Case 1 · 올포랜드 — ① 기능 개선</span></div>
+  <h2>데이터가 쌓일수록 느려지던 대민 게시판을<br><em>쿼리 내 조건 분기와 서버 페이징</em>으로 전환했습니다</h2>
+  <div class="row body" style="gap:0;align-items:stretch">
+    <div class="card col" style="border-top:5px solid #c9ced8">
+      <div class="label">BEFORE · 클라이언트 처리</div>
+      <div class="flowv">
+        <div class="fv"><span class="b">진입 시 전체 목록 조회</span></div><div class="fa">↓</div>
+        <div class="fv"><span class="b">탭 구분·페이지 분할을 스크립트가 처리</span></div><div class="fa">↓</div>
+        <div class="fv warn"><span class="b">게시물 누적 → 응답·렌더링 지연</span></div>
+      </div>
+    </div>
+    <div class="arrow" style="width:56px;font-size:28px;color:var(--p)">➜</div>
+    <div class="card col" style="border-top:5px solid var(--p)">
+      <div class="label p">AFTER · 서버 페이징</div>
+      <div class="flowv">
+        <div class="fv on"><span class="b">MyBatis 쿼리에 탭 조건 분기 추가</span></div><div class="fa p">↓</div>
+        <div class="fv on"><span class="b">Tibero 기반 서버 페이징 구현</span></div><div class="fa p">↓</div>
+        <div class="fv on2"><span class="b">사용자가 위치한 페이지의 목록만 응답</span></div>
+      </div>
+    </div>
+    <div style="width:22px"></div>
+    <div style="width:280px;display:flex;flex-direction:column;gap:12px">
+      <div class="pbox"><div class="label p">MY ROLE</div><div class="sm">현행 구조 분석부터 쿼리·화면 수정, 테스트, 운영 반영까지 단독 수행</div></div>
+      <div class="soft"><div class="label">PROCESS</div><div class="sm" style="line-height:2">현행 분석 → 쿼리·JSP 수정<br>→ 개발서버 테스트<br>→ 배포요청서 작성 → 운영 반영</div></div>
+      <div class="sbox"><div class="label s">KEY POINT</div><div class="sm">탭 분기 기준을 화면 스크립트에서 <b>쿼리 조건</b>으로 옮겨, 화면과 DB가 같은 기준으로 동작하도록 정리</div></div>
+    </div>
+  </div>
+  <style>.flowv{display:flex;flex-direction:column}.fv{background:var(--bg);border-radius:12px;padding:20px 18px;font-size:15.5px}.fv.warn{background:#FFF1EE;color:#C2412D}.fv.on{background:var(--ps)}.fv.on2{background:var(--p);color:#fff}.fa{text-align:center;color:var(--mute);font-size:16px;line-height:2.1}</style>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">07</span></div>
+</section>
+
+<!-- 08 WORK 1-2 SSL WA -->
+<section class="slide">
+  <div class="hd"><span class="tag"><b>03</b>WORK</span><span class="crumb">Case 1 · 올포랜드 — ② 인증 대응</span></div>
+  <h2>서비스를 멈추지 않고 <em>SSL 인증서를 교체</em>하고,<br><em>웹 접근성(WA) 인증</em> 기준에 맞춰 대민 페이지를 개선했습니다</h2>
+  <div class="row body" style="gap:22px">
+    <div class="card col">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px"><span class="chip p" style="margin:0">SSL / TLS</span><span class="b" style="font-size:17px">인증서 교체</span></div>
+      <div class="stp"><span class="dot">1</span><div><div class="b">일정·대상 확인</div><div class="sub sm">만료 일정과 적용 대상 WEB/WAS 서버 파악</div></div></div>
+      <div class="stp"><span class="dot">2</span><div><div class="b">교체·적용</div><div class="sub sm">신규 인증서 적용, 체인(중간) 인증서 구성 검증</div></div></div>
+      <div class="stp"><span class="dot">3</span><div><div class="b">검증·반영</div><div class="sub sm">개발서버 확인 후 운영 반영, 브라우저별 접속·Mixed Content 점검</div></div></div>
+    </div>
+    <div class="card col">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px"><span class="chip s" style="margin:0">KWCAG</span><span class="b" style="font-size:17px">웹 접근성 인증 대응</span></div>
+      <div class="stp"><span class="dot s">1</span><div><div class="b">진단</div><div class="sub sm">인증 심사 기준으로 대민 페이지 항목별 점검</div></div></div>
+      <div class="stp"><span class="dot s">2</span><div><div class="b">개선</div><div class="sub sm">대체 텍스트, 키보드 접근, 입력 서식 레이블, 명도 대비 수정</div></div></div>
+      <div class="stp"><span class="dot s">3</span><div><div class="b">재검증·공유</div><div class="sub sm">수정 결과를 재점검하고 담당 주무관과 공유</div></div></div>
+    </div>
+  </div>
+  <div class="soft sm" style="margin-top:22px;display:flex;gap:16px;align-items:center;padding:20px 24px"><span class="b" style="white-space:nowrap">함께 수행한 보안 조치</span><span class="sub">웹 취약점 점검 결과에 따른 로직 수정 · 침해사고 대응 지침에 따른 jQuery 버전 분석 · 불필요한 DB 계정·권한 정비 · 점검 안내 팝업 게시</span></div>
+  <style>.stp{display:flex;gap:14px;align-items:flex-start;padding:20px 0;border-top:1px dashed var(--line)}.stp:first-of-type{border-top:0}</style>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">08</span></div>
+</section>
+
+<!-- 09 WORK 1-3 OPS -->
+<section class="slide">
+  <div class="hd"><span class="tag"><b>03</b>WORK</span><span class="crumb">Case 1 · 올포랜드 — ③ 운영 프로세스</span></div>
+  <h2>정해진 <em>통제 절차</em> 안에서 요구 협의부터 배포까지,<br>매일의 점검과 품질 관리를 반복하고 있습니다</h2>
+  <div class="body">
+    <div class="label">SR 처리 흐름</div>
+    <div class="row" style="gap:0;align-items:stretch">
+      <div class="sr"><div class="n p">01</div><div class="b">요구 협의</div><div class="sub sm">홈페이지 담당 주무관과<br>직접 요구사항 확인</div></div><div class="arrow" style="width:34px">›</div>
+      <div class="sr"><div class="n p">02</div><div class="b">분석 · 개발</div><div class="sub sm">연계 로직 분석 후 구현,<br>단위·통합 테스트</div></div><div class="arrow" style="width:34px">›</div>
+      <div class="sr"><div class="n p">03</div><div class="b">배포 요청</div><div class="sub sm">DBA · AA 대상<br>긴급/정기 배포요청서 작성</div></div><div class="arrow" style="width:34px">›</div>
+      <div class="sr on"><div class="n">04</div><div class="b">통제 하 배포</div><div class="sub sm">SoftManager 형상관리<br>체크인 · 커밋 통제 준수</div></div>
+    </div>
+    <div class="row" style="gap:18px;margin-top:20px">
+      <div class="card col"><div class="b" style="margin-bottom:8px"><span class="s">●</span> 일일 점검</div><ul class="l s"><li>DB · 배치 서버 프로세스 구동 확인</li><li>서버 CPU · 메모리 · 디스크 점검</li><li>JENNIFER로 응답 시간 · 에러 트랜잭션 확인</li></ul></div>
+      <div class="card col"><div class="b" style="margin-bottom:8px"><span class="p">●</span> 품질 관리</div><ul class="l"><li>코드리뷰 체크리스트 수립</li><li>Null · 예외 · 트랜잭션, SQL 인젝션 방지</li><li>리팩토링 가이드 문서화 및 팀 공유</li></ul></div>
+      <div class="card col"><div class="b" style="margin-bottom:8px"><span style="color:var(--ink)">●</span> 주요 SR</div><ul class="l"><li>관리자 저장 안내 메시지 기능 추가</li><li>첨부파일 다운로드 경로 긴급 수정</li><li>뷰어 다운로드 URL 오류 수정 · 배포</li></ul></div>
+    </div>
+  </div>
+  <style>.sr{flex:1;background:var(--bg);border-radius:14px;padding:16px 18px}.sr .n{font-weight:700;font-size:13px;margin-bottom:4px}.sr.on{background:var(--p);color:#fff}.sr.on .sub{color:#dfe5ff}</style>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">09</span></div>
+</section>
+
+<!-- 10 WORK 2 CONTEXT -->
+<section class="slide">
+  <div class="hd"><span class="tag"><b>03</b>WORK</span><span class="crumb">Case 2 · 올림플래닛 — 입찰공고 AI 판정 시스템</span></div>
+  <h2>매일 오전의 절반을 쓰던 공고 확인 업무를<br><em>기술 요건으로 정리</em>해 LLM 판정 시스템으로 바꿨습니다</h2>
+  <div class="row body" style="gap:22px">
+    <div style="width:330px">
+      <div class="card">
+        <div class="label">CONTEXT</div>
+        <div class="kv"><span class="k">회사</span><span class="b">올림플래닛</span></div>
+        <div class="kv"><span class="k">기간</span><span>2026.05 – 2026.07</span></div>
+        <div class="kv"><span class="k">역할</span><span>사업운영 프로 (B2G)</span></div>
+        <div class="kv"><span class="k">수행</span><span>기획 · 구현 · 운영 · 개선</span></div>
+        <div style="height:1px;background:var(--line);margin:12px 0"></div>
+        <div class="label">BEFORE — 담당자의 하루</div>
+        <div class="prs">
+          <div class="it"><span class="dot o">1</span><span class="sm">여러 키워드로 나라장터 직접 검색</span></div>
+          <div class="it"><span class="dot o">2</span><span class="sm">공고를 하나씩 열어 관련성 판단</span></div>
+          <div class="it"><span class="dot o">3</span><span class="sm">참여할 만한 공고 정리 · 공유</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="row" style="gap:0;margin-bottom:8px"><div class="label" style="width:290px">현업의 요구</div><div style="width:46px"></div><div class="label p col">기술 요건</div></div>
+      <div class="rq"><div class="a">관련 공고를 빠짐없이 보고 싶다</div><div class="arrow" style="width:46px">➜</div><div class="c">자사 솔루션 유관 <b>13개 키워드</b>로 나라장터 Open API 조회</div></div>
+      <div class="rq"><div class="a">사람이 하던 판단을 대신해 줬으면</div><div class="arrow" style="width:46px">➜</div><div class="c"><b>Claude</b>가 공고별 적격 여부를 판단하고 점수화</div></div>
+      <div class="rq"><div class="a">꼭 봐야 할 공고만 받고 싶다</div><div class="arrow" style="width:46px">➜</div><div class="c"><b>기준 점수 이상</b> 공고만 선별</div></div>
+      <div class="rq"><div class="a">매일 아침, 쓰던 메신저로</div><div class="arrow" style="width:46px">➜</div><div class="c"><b>일일 배치</b> + Google Chat 웹훅 알림</div></div>
+    </div>
+  </div>
+  <style>.rq{display:flex;align-items:stretch;margin-bottom:12px}.rq .a{width:290px;background:var(--bg);border-radius:12px;padding:15px 18px;font-size:14px;display:flex;align-items:center}.rq .c{flex:1;background:var(--ps);border-radius:12px;padding:15px 18px;font-size:14px;display:flex;align-items:center;gap:4px}.rq .c b{color:var(--p2);margin:0 2px}</style>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">10</span></div>
+</section>
+
+<!-- 11 WORK 2 PIPELINE -->
+<section class="slide">
+  <div class="hd"><span class="tag"><b>03</b>WORK</span><span class="crumb">Case 2 · 올림플래닛 — 시스템 설계</span></div>
+  <h2>판단은 LLM에, 최종 선별은 점수 규칙에 맡겨<br><em>결과를 통제할 수 있는</em> 파이프라인으로 설계했습니다</h2>
+  <div class="row body" style="gap:8px;align-items:stretch">
+    <div class="pp"><div class="n">STEP 1</div><div class="t">일일 배치</div><div class="d">정해진 시각에<br>자동 실행</div></div><div class="arrow" style="width:22px">›</div>
+    <div class="pp"><div class="n">STEP 2</div><div class="t">공고 수집</div><div class="d">나라장터 Open API<br>13개 키워드 조회</div></div><div class="arrow" style="width:22px">›</div>
+    <div class="pp on"><div class="n">STEP 3</div><div class="t">AI 판정</div><div class="d">Claude API<br>공고별 적격 판단 · 점수<br>(최대 20건)</div></div><div class="arrow" style="width:22px">›</div>
+    <div class="pp"><div class="n">STEP 4</div><div class="t">선별</div><div class="d">기준 점수 이상<br>공고만 통과</div></div><div class="arrow" style="width:22px">›</div>
+    <div class="pp"><div class="n">STEP 5</div><div class="t">알림</div><div class="d">Google Chat<br>웹훅 전송</div></div>
+  </div>
+  <div class="label" style="margin-top:30px">DESIGN DECISIONS</div>
+  <div class="row" style="gap:18px">
+    <div class="card col"><div class="b p" style="margin-bottom:4px">역할 분리</div><div class="sm sub">애매한 관련성 판단은 LLM이, 통과 여부는 점수 기준이 결정해 결과를 예측·조정할 수 있게 했습니다</div></div>
+    <div class="card col"><div class="b p" style="margin-bottom:4px">노이즈 최소화</div><div class="sm sub">기준 점수를 넘은 공고만 보내, 담당자가 알림을 신뢰하고 바로 행동할 수 있게 했습니다</div></div>
+    <div class="card col"><div class="b p" style="margin-bottom:4px">기존 도구 활용</div><div class="sm sub">새 화면 대신 담당자가 이미 쓰는 Google Chat으로 전달해 도입 부담을 없앴습니다</div></div>
+  </div>
+  <style>.pp{flex:1;background:var(--bg);border-radius:14px;padding:18px 18px 22px}.pp .n{font-size:11.5px;font-weight:700;color:var(--p);letter-spacing:.06em}.pp .t{font-size:19px;font-weight:700;margin:6px 0 10px}.pp .d{font-size:13px;color:var(--sub)}.pp.on{background:var(--p);box-shadow:0 8px 24px rgba(59,91,253,.25)}.pp.on .n,.pp.on .t,.pp.on .d{color:#fff}</style>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">11</span></div>
+</section>
+
+<!-- 12 WORK 2 RESULT -->
+<section class="slide">
+  <div class="hd"><span class="tag"><b>03</b>WORK</span><span class="crumb">Case 2 · 올림플래닛 — 운영 중 개선과 결과</span></div>
+  <h2>운영 중 드러난 88초의 실행 시간을 <em>I/O 대기</em>로 진단하고,<br>Rate Limit 범위 안에서 병렬화해 13초로 줄였습니다</h2>
+  <div class="row body" style="gap:22px">
+    <div class="card" style="width:400px;display:flex;flex-direction:column">
+      <div class="label">EXECUTION TIME</div>
+      <div style="display:flex;align-items:flex-end;gap:40px;height:200px;padding:0 30px;border-bottom:1px solid var(--line)">
+        <div style="flex:1;text-align:center"><div class="b sub">88초</div><div style="height:170px;background:#cfd4dd;border-radius:8px 8px 0 0;margin-top:4px"></div></div>
+        <div style="flex:1;text-align:center"><div class="b p">13초</div><div style="height:25px;background:var(--p);border-radius:8px 8px 0 0;margin-top:4px"></div></div>
+      </div>
+      <div style="display:flex;gap:40px;padding:6px 30px 0" class="xs mute"><div style="flex:1;text-align:center">Before · 순차 처리</div><div style="flex:1;text-align:center">After · 병렬 처리</div></div>
+      <div style="margin-top:auto;background:var(--p);color:#fff;border-radius:12px;padding:12px;text-align:center;font-weight:700">약 85% 단축 · 약 6.7배</div>
+    </div>
+    <div class="col">
+      <div class="row" style="gap:14px">
+        <div class="soft col"><div class="label">DIAGNOSIS</div><ul class="l"><li>실행 시간 대부분이 외부 API 응답 대기</li><li>공고별 판정은 서로 독립된 작업</li><li>공고당 수 초 걸리는 LLM 판정이 최대 병목</li></ul></div>
+        <div class="pbox col"><div class="label p">SOLUTION</div><ul class="l"><li>ThreadPoolExecutor로 API 조회·LLM 판정 병렬화</li><li>Rate Limit을 고려한 동시 실행 수 제한</li><li>순차 호출 사이의 불필요한 대기 제거</li></ul></div>
+      </div>
+      <div class="label" style="margin-top:20px">BUSINESS IMPACT</div>
+      <div class="row" style="gap:0;align-items:stretch">
+        <div class="soft col"><div class="xs mute b">BEFORE</div><div class="b" style="font-size:17px">오전의 절반을<br>공고 검색·확인에</div></div>
+        <div class="arrow" style="width:44px;color:var(--s)">➜</div>
+        <div class="sbox col"><div class="xs b s">AFTER</div><div class="b" style="font-size:17px">아침에 도착한<br>알림만 확인</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">12</span></div>
+</section>
+
+<!-- 13 PROJECT 1 -->
+<section class="slide">
+  <div class="hd"><span class="tag"><b>04</b>PROJECT</span><span class="crumb">Project 1 · 선견지표 — 선거 정보·모의투표 플랫폼</span></div>
+  <h2>풀스택 서비스와 <em>도메인 특화 RAG 챗봇</em>을 함께 구현해<br>KDT 풀스택 프로젝트 최우수상을 받았습니다</h2>
+  <div class="row" style="gap:10px;margin-top:20px">
+    <span class="chip">2025.04 – 2025.05</span><span class="chip">6인 팀</span><span class="chip p">🏆 최우수상</span>
+  </div>
+  <div class="row" style="gap:8px;margin-top:10px;align-items:stretch">
+    <div class="ly">React<span>Zustand</span></div><div class="arrow" style="width:20px;font-size:16px">⇄</div>
+    <div class="ly on">Spring Boot<span>Security · OAuth2 · JWT</span></div><div class="arrow" style="width:20px;font-size:16px">⇄</div>
+    <div class="ly sc">FastAPI<span>RAG 챗봇 서빙</span></div><div class="arrow" style="width:20px;font-size:16px">⇄</div>
+    <div class="ly">Elasticsearch<span>BM25 + Dense Vector</span></div><div class="arrow" style="width:20px;font-size:16px">·</div>
+    <div class="ly">Web3j<span>블록체인 / DB 투표</span></div>
+  </div>
+  <div class="row" style="gap:18px;margin-top:18px">
+    <div class="card col">
+      <div class="b" style="font-size:16px;margin-bottom:10px"><span class="s">■</span> RAG 검색 품질 개선</div>
+      <div class="prs">
+        <div class="it"><span class="t mute">문제</span><span class="d">무응답 · 환각 발생</span></div>
+        <div class="it"><span class="t mute">원인</span><span class="d">범용 임베딩(MiniLM)이 한국어 정치·정책 용어를 구분하지 못함</span></div>
+        <div class="it"><span class="t s">해결</span><span class="d">BM25 + 384차원 Dense 하이브리드 검색 → 쿼리 확장 → 키워드 폴백의 3단계 검색, 질문 의도별 인덱스·가중치 조정</span></div>
+      </div>
+    </div>
+    <div class="card col">
+      <div class="b" style="font-size:16px;margin-bottom:10px"><span class="p">■</span> 비동기 요청 제어</div>
+      <div class="prs">
+        <div class="it"><span class="t mute">문제</span><span class="d">페이지 전환 후 늦게 도착한 이전 응답이 최신 상태를 덮어씀</span></div>
+        <div class="it"><span class="t mute">원인</span><span class="d">언마운트 이후에도 이전 API 요청이 살아 있는 레이스 컨디션</span></div>
+        <div class="it"><span class="t p">해결</span><span class="d">Zustand 전역 로그인 상태 + AbortController로 이전 요청 취소, 최신 요청만 반영</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="soft sm" style="margin-top:18px;display:flex;gap:16px;align-items:center;padding:16px 24px"><span class="b" style="white-space:nowrap">그 외 구현</span><span class="sub">Google OAuth2 + JWT 인증 · Web3j 기반 블록체인/DB 하이브리드 투표 · FastAPI 기반 RAG 챗봇 서빙</span></div>
+  <style>.ly{flex:1;background:var(--bg);border-radius:12px;padding:16px 6px;text-align:center;font-weight:700;font-size:15px;display:flex;flex-direction:column;justify-content:center}.ly span{font-weight:400;font-size:12.5px;color:var(--sub)}.ly.on{background:var(--p);color:#fff}.ly.on span{color:#dfe5ff}.ly.sc{background:var(--s);color:#fff}.ly.sc span{color:#e1fbf7}</style>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">13</span></div>
+</section>
+
+<!-- 14 PROJECT 2 -->
+<section class="slide">
+  <div class="hd"><span class="tag"><b>04</b>PROJECT</span><span class="crumb">Project 2 · TechX 그룹웨어 — 실시간 사내 협업 플랫폼</span></div>
+  <h2><em>실시간 화상회의</em>부터 인증, 예약 동시성까지<br>협업 플랫폼의 핵심 기능을 구현했습니다</h2>
+  <div class="row" style="gap:10px;margin-top:16px">
+    <span class="chip">2025.04 – 2025.05</span><span class="chip">6인 팀</span><span class="chip p">Spring Boot</span><span class="chip p">WebRTC</span><span class="chip p">STOMP/SockJS</span><span class="chip p">Spring Security</span>
+  </div>
+  <div class="row" style="gap:10px;margin-top:10px;align-items:stretch">
+    <div class="ly" style="flex:1">Peer A<span>브라우저</span></div><div class="arrow" style="width:24px;font-size:16px">⇄</div>
+    <div class="ly on" style="flex:2.4">시그널링 서버 (직접 구현)<span>Spring Boot · STOMP/SockJS — Offer / Answer · ICE Candidate 중계</span></div><div class="arrow" style="width:24px;font-size:16px">⇄</div>
+    <div class="ly" style="flex:1">Peer B<span>브라우저</span></div>
+  </div>
+  <div class="row" style="gap:16px;margin-top:18px">
+    <div class="card col" style="min-height:250px"><span class="dot">1</span><div class="b" style="margin:14px 0 8px;font-size:17px">연결 상태 관리</div><div class="sm sub">원격 세션 설정 전에 도착한 ICE 후보를 큐에 보관했다가 설정 완료 시점에 순차 처리해, 도착 순서와 무관하게 연결</div></div>
+    <div class="card col" style="min-height:250px"><span class="dot">2</span><div class="b" style="margin:14px 0 8px;font-size:17px">토큰 기반 인증</div><div class="sm sub">Access / Refresh / QR 토큰을 용도별로 분리하고, 커스텀 필터와 블랙리스트로 탈취 토큰 재사용 차단</div></div>
+    <div class="card col" style="min-height:250px"><span class="dot">3</span><div class="b" style="margin:14px 0 8px;font-size:17px">예약 동시성 제어</div><div class="sm sub">회의실·비품 예약에 DB 조건문과 @Transactional을 적용해 같은 시간대 중복 예약 방지</div></div>
+    <div class="card col" style="min-height:250px"><span class="dot">4</span><div class="b" style="margin:14px 0 8px;font-size:17px">세션 정리</div><div class="sm sub">heartbeat 기반으로 끊긴 연결을 정리하고, JWT 기반 QR 출결을 Flutter 앱과 연동</div></div>
+  </div>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">14</span></div>
+</section>
+
+<!-- 15 PROJECT 3 -->
+<section class="slide">
+  <div class="hd"><span class="tag"><b>04</b>PROJECT</span><span class="crumb">Project 3 · 데이터와 모델</span></div>
+  <h2>데이터를 직접 모으고 다듬어, <em>모델과 시스템이 쓰는 형태</em>로 만들었습니다</h2>
+  <div class="row body" style="gap:22px">
+    <div class="card col" style="padding:0;overflow:hidden">
+      <div style="padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center"><div><div class="b" style="font-size:17px">시맨틱 위치정보 추정 서비스</div><div class="sub xs">SW캡스톤디자인 · 2023.09 – 2023.12 · 2인</div></div><span class="chip s" style="margin:0">우수상</span></div>
+      <div style="padding:22px 24px;gap:20px" class="prs">
+        <div class="it"><span class="t mute">문제</span><span class="d">“공대 7호관 옆 흡연구역” 같은 자연어 질의는 표현이 제각각이라 키워드로 찾기 어려움</span></div>
+        <div class="it"><span class="t s">데이터</span><span class="d">캠퍼스 POI 9종에 좌표·설명 텍스트를 매핑하고 질의·정답·오답 쌍을 직접 구축</span></div>
+        <div class="it"><span class="t s">모델</span><span class="d">DPR 방식으로 KLUE-BERT 기반 SBERT 파인튜닝, 의미 유사도로 POI 검색</span></div>
+        <div class="it"><span class="t p">결과</span><span class="d">Flask 서버 + 지도 클라이언트로 질의 위치를 표시하는 웹 서비스 완성</span></div>
+      </div>
+    </div>
+    <div class="card col" style="padding:0;overflow:hidden">
+      <div style="padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center"><div><div class="b" style="font-size:17px">IoT 센서 데이터 수집 대시보드</div><div class="sub xs">셈스게임즈 인턴 · 2023.03 – 2023.12</div></div><span class="chip p" style="margin:0">누락 0건</span></div>
+      <div style="padding:22px 24px;gap:20px" class="prs">
+        <div class="it"><span class="t mute">문제</span><span class="d">한 프로세스가 센서 수집과 서버 업로드를 함께 처리해 전송 지연 시 값이 섞이거나 누락</span></div>
+        <div class="it"><span class="t s">분석</span><span class="d">운영체제의 프로세스 동작과 블로킹 I/O 원리를 학습해 지연 원인 파악</span></div>
+        <div class="it"><span class="t s">해결</span><span class="d">수집 루프와 전송 루프를 Multiprocessing으로 분리 (Arduino · Raspberry Pi 4)</span></div>
+        <div class="it"><span class="t p">결과</span><span class="d">I/O 병목 해소, 센서 데이터 적재 누락 0건</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">15</span></div>
+</section>
+
+<!-- 16 SKILLS -->
+<section class="slide">
+  <div class="hd"><span class="tag"><b>05</b>MORE</span><span class="crumb">Skills</span></div>
+  <h2>실무와 프로젝트에서 <em>직접 사용한 기술</em>입니다</h2>
+  <div style="display:flex;gap:18px;margin-top:10px" class="xs sub"><span><span class="sk-d wk"></span> 실무 사용</span><span><span class="sk-d pj"></span> 프로젝트 · 학습</span></div>
+  <div class="skg body" style="margin-top:16px">
+    <div class="sk"><div class="h">Backend</div><div><span class="t wk">Java</span><span class="t wk">Spring · 전자정부</span><span class="t wk">JSP</span><span class="t wk">MyBatis</span><span class="t wk">Python</span><span class="t">Spring Boot</span><span class="t">Spring Security · JWT</span><span class="t">FastAPI</span><span class="t">Flask</span></div></div>
+    <div class="sk"><div class="h">Database</div><div><span class="t wk">Tibero</span><span class="t wk">SQL (SQLD)</span><span class="t">MySQL</span><span class="t">Oracle</span><span class="t">DynamoDB</span><span class="t">Elasticsearch</span></div></div>
+    <div class="sk"><div class="h">AI · Data</div><div><span class="t wk">Claude API</span><span class="t">OpenAI API</span><span class="t">RAG</span><span class="t">Sentence-Transformers</span><span class="t">KLUE-BERT · DPR</span><span class="t">TensorFlow</span><span class="t">Pandas · NumPy</span></div></div>
+    <div class="sk"><div class="h">Frontend</div><div><span class="t wk">JavaScript</span><span class="t">React</span><span class="t">Zustand</span><span class="t">HTML · CSS</span></div></div>
+    <div class="sk"><div class="h">Ops · Infra</div><div><span class="t wk">JENNIFER (APM)</span><span class="t wk">SoftManager</span><span class="t wk">Linux</span><span class="t">Git · GitHub Actions</span><span class="t">Docker</span><span class="t">AWS (EC2 · S3)</span><span class="t">Jenkins · SVN</span></div></div>
+    <div class="sk"><div class="h">Security · Quality</div><div><span class="t wk">SSL / TLS 인증서</span><span class="t wk">웹 접근성 (KWCAG)</span><span class="t wk">웹 취약점 조치</span><span class="t wk">코드리뷰 체크리스트</span></div></div>
+    <div class="sk"><div class="h">Concurrency · Real-time</div><div><span class="t wk">ThreadPoolExecutor</span><span class="t wk">Multiprocessing</span><span class="t">WebRTC</span><span class="t">WebSocket · STOMP</span></div></div>
+    <div class="sk"><div class="h">Etc.</div><div><span class="t">C · C++ (STL)</span><span class="t">Kotlin</span><span class="t">Web3j</span><span class="t">Arduino · Raspberry Pi</span></div></div>
+  </div>
+  <style>
+  .skg{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px}
+  .sk{display:flex;gap:14px;align-items:flex-start;background:var(--bg);border-radius:14px;padding:12px 16px;min-height:62px}
+  .sk .h{width:120px;flex:none;font-weight:700;font-size:13.5px;padding-top:3px}
+  .sk .t{display:inline-block;font-size:12px;font-weight:500;padding:3px 10px;border-radius:999px;margin:2px 4px 2px 0;background:#fff;border:1px solid var(--sl);color:#0c8a7d}
+  .sk .t.wk{background:var(--p);border-color:var(--p);color:#fff}
+  .sk-d{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:middle;margin-right:4px}
+  .sk-d.wk{background:var(--p)} .sk-d.pj{background:#fff;border:2px solid var(--s)}
+  </style>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">16</span></div>
+</section>
+
+<!-- 17 EDU AWARDS -->
+<section class="slide">
+  <div class="hd"><span class="tag"><b>05</b>MORE</span><span class="crumb">Education · Awards · Certification</span></div>
+  <h2>기초를 다진 과정과 <em>그 결과</em>입니다</h2>
+  <div class="row body" style="gap:20px">
+    <div class="card col">
+      <div class="label">EDUCATION &amp; ACTIVITY</div>
+      <div class="ed hi"><div class="d">2019.03 – 2024.02</div><div><div class="b">전북대학교 IT정보공학과 학사 졸업</div><div class="sub xs">학점 3.35 / 4.5</div></div></div>
+      <div class="ed"><div class="d">2024.11 – 2025.05</div><div>KDT 클라우드 활용 풀스택 개발 과정 수료</div></div>
+      <div class="ed"><div class="d">2024.01</div><div>AWS DeepRacer 강화학습 동계 캠프</div></div>
+      <div class="ed"><div class="d">2022.08 – 2022.11</div><div>전북대 CV연구실 학부연구 (중기부 R&amp;D)</div></div>
+      <div class="ed"><div class="d">2022.04 – 2022.12</div><div>한이음 ICT 멘토링 프로젝트</div></div>
+      <div class="ed"><div class="d">2022.01 – 2022.09</div><div>42 SEOUL 본과정</div></div>
+      <div class="ed"><div class="d">2022.08</div><div>AWS Technical Essentials 수료</div></div>
+    </div>
+    <div style="width:470px;display:flex;flex-direction:column;gap:18px">
+      <div class="card">
+        <div class="label">AWARDS</div>
+        <div class="aw"><span class="md g1">최우수</span><div><div class="b sm">KDT 풀스택 개발 프로젝트 '선견지표'</div><div class="sub xs">2025.05 · 한국정보교육원</div></div></div>
+        <div class="aw"><span class="md g2">우수</span><div><div class="b sm">SW캡스톤디자인 경진대회</div><div class="sub xs">2023.12 · 전북대학교 SW중심대학사업단</div></div></div>
+        <div class="aw"><span class="md g3">장려</span><div><div class="b sm">제1회 SW 창업 아이디어 경진대회</div><div class="sub xs">2023.12 · 전북대학교 SW중심대학사업단</div></div></div>
+        <div class="aw"><span class="md g3">동상</span><div><div class="b sm">IT정보공학과 설계작품경진대회</div><div class="sub xs">2020.12 · 전북대학교 IT정보공학과</div></div></div>
+      </div>
+      <div class="card">
+        <div class="label">CERTIFICATION</div>
+        <div class="row" style="gap:12px">
+          <div class="pbox col" style="padding:12px 16px"><div class="b p">SQLD</div><div class="sub xs">2021.04 · 한국데이터산업진흥원</div></div>
+          <div class="sbox col" style="padding:12px 16px"><div class="b s">OPIc IM2</div><div class="sub xs">2026.02 · ACTFL</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+  .ed{display:flex;gap:14px;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px}.ed:first-of-type{border-top:0}
+  .ed .d{width:130px;flex:none;color:var(--mute);font-size:12.5px;font-weight:500;padding-top:1px}
+  .ed.hi{background:var(--ps);border-radius:10px;padding:10px 12px;margin:0 -12px 4px;border:0}
+  .aw{display:flex;gap:12px;align-items:center;padding:7px 0}
+  .md{width:52px;flex:none;text-align:center;font-size:11.5px;font-weight:700;border-radius:999px;padding:3px 0}
+  .md.g1{background:var(--p);color:#fff}.md.g2{background:var(--s);color:#fff}.md.g3{background:var(--bg);color:var(--sub);border:1px solid var(--line)}
+  </style>
+  <div class="foot"><span>이미르 · Portfolio</span><span class="ln"></span><span class="pg">17</span></div>
+</section>
+
+<!-- 18 CLOSING -->
+<section class="slide" style="padding:0">
+  <div style="position:absolute;left:-160px;bottom:-220px;width:560px;height:560px;border-radius:50%;background:var(--ps)"></div>
+  <div style="position:absolute;right:-90px;top:-120px;width:340px;height:340px;border-radius:50%;background:var(--ss)"></div>
+  <div style="position:absolute;left:0;right:0;top:92px;text-align:center">
+    <div class="tag">THANK YOU</div>
+    <div style="font-size:40px;font-weight:700;line-height:1.35;margin-top:24px">만든 것이 현장에서<br><span class="p">끝까지 동작하도록</span> 책임지겠습니다</div>
+    <div class="sub" style="font-size:16px;margin-top:16px">어떤 자리에서든, 기능을 완성하는 데서 멈추지 않고 안정적으로 쓰이는 순간까지 함께하겠습니다.</div>
+  </div>
+  <div style="position:absolute;left:180px;right:180px;top:372px;display:flex;gap:16px">
+    <div class="card col" style="text-align:center"><div class="b p">원리부터 확인합니다</div><div class="sub xs" style="margin-top:4px">현상보다 원인을 먼저 찾습니다</div></div>
+    <div class="card col" style="text-align:center"><div class="b s">현업과 직접 소통합니다</div><div class="sub xs" style="margin-top:4px">요구를 직접 듣고 함께 조율합니다</div></div>
+    <div class="card col" style="text-align:center"><div class="b p">배운 것을 남깁니다</div><div class="sub xs" style="margin-top:4px">문서와 공유로 팀의 자산을 만듭니다</div></div>
+  </div>
+  <div style="position:absolute;left:0;right:0;top:520px;display:flex;justify-content:center">
+    <div style="background:var(--ink);color:#fff;border-radius:999px;padding:14px 34px;font-size:15px;font-weight:500">이미르 &nbsp;·&nbsp; mileui73@gmail.com &nbsp;·&nbsp; 010-4850-5772 &nbsp;·&nbsp; github.com/lalala5772</div>
+  </div>
+</section>
+
+</body>
+</html>
