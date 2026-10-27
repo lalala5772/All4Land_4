@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>이미르 · Technical Quality Engineer</title>
+<style>
+@font-face{font-family:"NotoKR";font-weight:400;src:url(fonts/noto-sans-kr-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"NotoKR";font-weight:500;src:url(fonts/noto-sans-kr-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"NotoKR";font-weight:700;src:url(fonts/noto-sans-kr-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"NotoKR";font-weight:400;src:url(fonts/noto-sans-kr-korean-400-normal.woff2) format("woff2")}
+@font-face{font-family:"NotoKR";font-weight:500;src:url(fonts/noto-sans-kr-korean-500-normal.woff2) format("woff2")}
+@font-face{font-family:"NotoKR";font-weight:700;src:url(fonts/noto-sans-kr-korean-700-normal.woff2) format("woff2")}
+
+:root{--blue:#1a6fe0;--ink:#1f2328;--sub:#555c66;--line:#d9dee5;--head:#f1f4f8;--note:#f6f8fb;--chip:#eef1f5}
+@page{size:A4;margin:16mm 15mm 16mm 15mm}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font-family:"NotoKR","Noto Color Emoji",sans-serif;font-size:9.6pt;line-height:1.6;word-break:keep-all}
+h1{font-size:20pt;margin:0 0 6px;padding-bottom:8px;border-bottom:2px solid var(--blue);font-weight:700}
+h2{color:var(--blue);font-size:13.5pt;margin:20px 0 8px;font-weight:700}
+h3{font-size:11pt;margin:14px 0 4px;font-weight:700}
+h3.dia::before{content:"◆ ";color:var(--blue)}
+hr{border:0;border-top:1px solid var(--line);margin:18px 0 0}
+p{margin:4px 0}
+.muted{color:var(--sub)}
+table{width:100%;border-collapse:collapse;margin:6px 0 8px;page-break-inside:auto}
+tr{page-break-inside:avoid}
+th,td{border:1px solid var(--line);padding:4px 8px;text-align:left;vertical-align:top}
+th{background:var(--head);font-weight:700}
+td.k{font-weight:700;white-space:nowrap}
+.note{background:var(--note);border-left:3px solid var(--blue);padding:6px 10px;margin:6px 0 8px}
+.note b{display:block}
+.chip{display:inline-block;background:var(--chip);border-radius:3px;padding:0 6px;margin:1px 2px;font-size:8.6pt}
+.stack{margin:2px 0}
+.profile{display:flex;gap:14px;align-items:flex-start}
+.profile img{width:78px;height:100px;object-fit:cover;border-radius:3px}
+.profile table{margin:0}
+.profile td:first-child{width:70px;background:var(--head);font-weight:700}
+a{color:var(--blue);text-decoration:none}
+.pb{page-break-before:always}
+.keep{page-break-inside:avoid}
+ul{margin:4px 0;padding-left:18px}
+.closing p{margin:3px 0}
+</style>
+</head>
+<body>
+
+<h1>이미르 · Technical Quality Engineer</h1>
+
+<h2>Profile</h2>
+<div class="profile">
+  <img src="photo.jpg" alt="증명사진">
+  <table>
+    <tr><td>이름</td><td>이미르</td></tr>
+    <tr><td>포지션</td><td>Technical Quality Engineer</td></tr>
+    <tr><td>학력</td><td>전북대학교 IT정보공학과 학사 졸업 (2019.03 – 2024.02) · 학점 3.35 / 4.5</td></tr>
+    <tr><td>휴대전화</td><td>010-4850-5772</td></tr>
+    <tr><td>이메일</td><td>mileui73@gmail.com</td></tr>
+    <tr><td>GitHub</td><td><a href="https://github.com/lalala5772">github.com/lalala5772</a></td></tr>
+  </table>
+</div>
+<div class="note">
+  <b>보안 솔루션이 고객의 현장에서 끝까지 안정적으로 동작하도록, 문제의 원인을 끝까지 추적합니다.</b>
+  금융정보분석원(FIU) 정보시스템을 운영하며 SSL 인증서 교체·웹 접근성(WA) 인증·웹 취약점 조치를 직접 수행했습니다.
+  재현 → 원인 규명 → 검증 → 배포의 흐름으로 고객사 이슈를 해결하는 품질 엔지니어가 되겠습니다.
+</div>
+
+<hr>
+<h2>핵심 성과 요약</h2>
+<table>
+  <tr><th style="width:34%">성과</th><th>내용</th></tr>
+  <tr><td class="k">금융권 보안·인증 대응</td><td>금융정보분석원(FIU) 포털 <b>SSL 인증서 교체</b> 및 <b>웹 접근성(WA) 인증</b> 대응, 웹 취약점 조치</td></tr>
+  <tr><td class="k">보고된 오류의 원인 규명</td><td>다운로드 '오류'로 보고된 건이 취약점 점검 후 적용된 <b>의도된 보안 기능</b>임을 규명 → 개선 로직 반영</td></tr>
+  <tr><td class="k">간헐적 장애 재현·해결</td><td>WebRTC ICE Candidate 순서 역전을 로그로 재현·규명 → <b>후보 큐 기반 상태 관리</b></td></tr>
+  <tr><td class="k">성능 병목 개선 85%</td><td>LLM 기반 입찰공고 판정 배치 <b>88초 → 13초</b> (I/O 병목 병렬화)</td></tr>
+</table>
+
+<hr>
+<h2>주요 경험 요약</h2>
+<p class="muted">운영 중인 시스템에서 문제를 재현하고, 원인을 규명해, 검증된 형태로 고객 환경에 반영한 경험들입니다.</p>
+
+<h3 class="dia">금융권 정보시스템 SSL 인증서 교체 및 웹 접근성(WA) 인증 대응</h3>
+<div class="stack">Spring, JSP, WEB/WAS · <span class="chip">SSL/TLS 인증서</span><span class="chip">웹 접근성(KWCAG)</span><span class="chip">Tibero</span><span class="chip">JENNIFER</span></div>
+<div class="note">금융정보분석원 대민 포털의 SSL 인증서 만료에 맞춰 인증서 교체·서버 적용·체인 검증을 진행하고, 적용 후 브라우저별 접속과 HTTP 리소스 혼용 여부를 점검 /
+웹 접근성 인증 심사를 위해 KWCAG 기준으로 대민 페이지를 점검·수정하고, 재검증 결과를 정리해 담당 주무관과 공유</div>
+
+<h3 class="dia">보안 점검 기반 오류 원인 규명 및 레거시 정상화</h3>
+<div class="stack">Java, Spring, JSP, MyBatis · <span class="chip">전자정부프레임워크</span><span class="chip">Tibero</span><span class="chip">SoftManager</span></div>
+<div class="note">웹 취약점 분석 중 '미사용'으로 잘못 분류돼 오류를 일으키던 참조 ID를 찾아 서비스 로직을 정상화하고, 현상과 의도된 보안 동작을 구분해 개선 범위를 확정</div>
+
+<h3 class="dia">간헐적 연결 실패 재현 및 원인 분석</h3>
+<div class="stack">Java, Spring, JavaScript · <span class="chip">WebRTC</span><span class="chip">WebSocket</span><span class="chip">STOMP/SockJS</span></div>
+<div class="note">일부 접속에서만 발생하던 P2P 연결 실패를 로그로 재현하고, 메시지 도착 순서 의존성을 원인으로 규명해 후보 큐 기반 상태 흐름으로 해결</div>
+
+<h3 class="dia">병목 분석을 통한 성능 품질 개선</h3>
+<div class="stack">Python · <span class="chip">Claude API</span><span class="chip">ThreadPoolExecutor</span><span class="chip">Google Chat Webhook</span></div>
+<div class="note">나라장터 입찰공고 판정 시스템의 병목이 네트워크 I/O 대기임을 측정으로 확인하고, Rate Limit을 고려한 병렬화로 실행 시간 85% 단축</div>
+
+<h3 class="dia">고객·유관 조직과 맞물려 돌아가는 운영</h3>
+<div class="stack">운영·협업 · <span class="chip">SR 처리</span><span class="chip">배포요청서</span><span class="chip">단위·통합 테스트</span></div>
+<div class="note">금융정보분석원 홈페이지 담당 주무관과 직접 SR을 처리하고, DBA·AA와 배포를 조율 / 스타트업 사업운영 직무에서 고객사(B2G) 요구를 직접 경험</div>
+
+<hr>
+<h2>Tech Stack</h2>
+<table>
+  <tr><th style="width:26%">분야</th><th>기술</th></tr>
+  <tr><td class="k">Backend</td><td>Java · Spring Boot · Spring Legacy(전자정부) · Spring Security · JWT · JSP · MyBatis · Python · FastAPI</td></tr>
+  <tr><td class="k">Data · DB</td><td>Tibero · Oracle · MySQL · SQL (SQLD)</td></tr>
+  <tr><td class="k">Ops · Monitoring</td><td>JENNIFER (APM) · SoftManager(형상관리) · Linux · 서버 CPU·메모리·디스크 모니터링 · Git · SVN · Jenkins</td></tr>
+  <tr><td class="k">Security · Quality</td><td>SSL/TLS 인증서 적용 · 웹 접근성(KWCAG) · 웹 취약점 조치 · 코드리뷰 체크리스트 · 단위·통합 테스트</td></tr>
+  <tr><td class="k">Network · Concurrency</td><td>WebRTC · WebSocket · STOMP/SockJS · ThreadPoolExecutor · Multiprocessing</td></tr>
+  <tr><td class="k">Etc.</td><td>React · JavaScript · Zustand · C · C++(STL, 알고리즘) · Kotlin · Docker · AWS(EC2, S3, DynamoDB) · Claude API · OpenAI API · Elasticsearch</td></tr>
+</table>
+
+<hr>
+<h2>Work Experience</h2>
+<h3>🏢 올포랜드 (All4land)</h3>
+<p class="muted">국토·해양·재난 등 공공 분야의 공간정보(GIS) 데이터 구축과 시스템 통합(SI)을 수행하는 공간정보 ICT 기업</p>
+<table>
+  <tr><th style="width:20%">기간</th><th style="width:20%">직무</th><th>담당</th></tr>
+  <tr><td>2026.09 – 재직 중</td><td>개발직군 인턴</td><td>금융위원회 금융정보분석원(FIU) 정보시스템 유지보수·운영</td></tr>
+</table>
+<div class="note">전자정부프레임워크(Spring Legacy) 기반 대민·관리자 포털의 기능 개선, 보안·인증 대응, 형상관리 기반 배포</div>
+<p><b>활용 기술</b> <span class="chip">Spring</span><span class="chip">JSP</span><span class="chip">Tibero</span><span class="chip">JENNIFER</span><span class="chip">SoftManager</span></p>
+
+<div class="keep">
+<h3>① SSL 인증서 교체 및 웹 접근성(WA) 인증 대응</h3>
+<table>
+  <tr><th style="width:12%">구분</th><th>내용</th></tr>
+  <tr><td class="k">SSL</td><td>인증서 만료 일정에 맞춰 신규 인증서 교체 → WEB/WAS 적용 및 체인(중간) 인증서 검증 → 개발서버 확인 후 운영 반영, 브라우저별 접속·HTTP 리소스 혼용(Mixed Content) 여부 점검</td></tr>
+  <tr><td class="k">WA</td><td>웹 접근성 인증 심사를 위해 KWCAG 기준으로 대민 페이지 점검 (대체 텍스트, 키보드 접근, 입력 서식 레이블, 명도 대비 등) → 수정 후 재검증</td></tr>
+  <tr><td class="k">결과</td><td>점검·조치 내역을 체크리스트로 정리해 담당 주무관과 공유, 인증 일정에 맞춘 대응 프로세스 경험</td></tr>
+</table>
+</div>
+
+<div class="keep">
+<h3>② 대민 재정정보 게시판 서버 페이징 전환</h3>
+<table>
+  <tr><th style="width:12%">구분</th><th>내용</th></tr>
+  <tr><td class="k">문제</td><td>전체 목록을 클라이언트에서 한 번에 불러오는 구조 → 데이터 누적 시 렌더링 지연</td></tr>
+  <tr><td class="k">해결</td><td>클라이언트 내 탭 분기 로직 수정, 쿼리 조건문 추가(쿼리 내 탭 분기), 서버 페이징 구현 후 개발서버 테스트·배포</td></tr>
+  <tr><td class="k">결과</td><td>쿼리 내 조건에 따른 탭 분기로 사용자가 위치한 페이지의 리스트 정보를 서버에서 제공</td></tr>
+</table>
+</div>
+
+<h3>③ 보안 취약점 조치 및 레거시 로직 정상화</h3>
+<ul>
+  <li>웹 취약점 분석 중 '미사용'으로 잘못 분류돼 오류를 일으키던 참조 ID를 찾아 서비스 로직 수정</li>
+  <li>파일 다운로드 경로 오류 관련 긴급 요구사항 처리 및 권한 검증 로직 점검</li>
+  <li>금융권 침해사고 대응 지침에 따라 jQuery 버전 분석, 불필요한 DB 계정·권한 정비</li>
+</ul>
+
+<h3>④ 운영 프로세스 및 타 조직 협업</h3>
+<ul>
+  <li>DBA·AA(Application Architect) 대상 긴급/정기 배포요청서 작성, 단위·통합 테스트 산출물 관리</li>
+  <li>SoftManager 형상관리 체크인/커밋 통제 준수</li>
+  <li>홈페이지 담당 주무관과 직접 소통하며 요구사항을 할당받아 개발 진행</li>
+</ul>
+
+<div class="keep">
+<h3>📋 운영 업무 상세</h3>
+<table>
+  <tr><th style="width:14%">구분</th><th>내용</th></tr>
+  <tr><td class="k">일일 점검</td><td>DB·배치 서버 프로세스 구동 확인, 서버 CPU·메모리·디스크 모니터링, JENNIFER로 응답 시간·에러 트랜잭션 확인, 이상 징후 담당자 공유</td></tr>
+  <tr><td class="k">코드 품질</td><td>코드리뷰 체크리스트 수립 (Null·예외·트랜잭션 처리, SQL 인젝션 방지) → 리팩토링 가이드 문서화 및 팀 공유</td></tr>
+  <tr><td class="k">시스템 분석</td><td>대민·관리자 페이지 기능별 구분 및 연계 로직 분석, 개발목록 관리대장 업데이트, PL 보고</td></tr>
+  <tr><td class="k">보안 대응</td><td>PHP 취약점 관련 대민·관리자 페이지 점검, 점검 기간 안내 팝업 제작·게시</td></tr>
+  <tr><td class="k">SR 처리</td><td>관리자 '연혁' 저장 안내 메시지 기능 추가, 법령정보 게시판 첨부파일 다운로드 경로 긴급 수정, 뷰어 다운로드 URL 오류 수정·배포</td></tr>
+  <tr><td class="k">원인 규명</td><td>다운로드 오류로 보고된 건이 웹 취약점 점검 이후 적용된 의도된 보안 기능임을 파악 → 게시판 개선 로직에 반영</td></tr>
+</table>
+</div>
+
+<div class="keep">
+<h3>🏢 올림플래닛 (Olim Planet)</h3>
+<p class="muted">3D 가상공간 플랫폼(XROO, 집뷰)을 개발하고 공공·기업 대상 B2G·B2B 사업을 운영하는 스타트업</p>
+<table>
+  <tr><th style="width:24%">기간</th><th style="width:18%">직무</th><th>담당</th></tr>
+  <tr><td>2026.05 – 2026.07 (3개월)</td><td>사업운영 프로(pro)</td><td>B2G 사업 운영 / 나라장터 입찰공고 자동 모니터링 시스템 구축</td></tr>
+</table>
+<p><b>활용 기술</b> <span class="chip">Python</span><span class="chip">Claude API</span><span class="chip">나라장터 Open API</span><span class="chip">ThreadPoolExecutor</span><span class="chip">Google Chat Webhook</span></p>
+<p><b>입찰공고 판정 파이프라인 병목 분석 및 병렬화</b></p>
+<table>
+  <tr><th style="width:12%">구분</th><th>내용</th></tr>
+  <tr><td class="k">흐름</td><td>자사 솔루션 유관 13개 키워드로 나라장터 Open API 조회 → 수집 공고(최대 20건)를 Claude로 적격 판단 → 기준 점수 이상만 Google Chat 웹훅 알림</td></tr>
+  <tr><td class="k">문제</td><td>키워드·엔드포인트별 API 호출과 공고별 LLM 호출이 직렬로 쌓여 1회 실행에 88초 소요</td></tr>
+  <tr><td class="k">해결</td><td>병목이 네트워크 I/O 대기임을 확인 → ThreadPoolExecutor로 API 조회·LLM 판정 병렬화, 불필요한 대기 제거, Rate Limit을 고려해 동시 실행 수 제한</td></tr>
+  <tr><td class="k">결과</td><td>88초 → 13초 (약 85% 단축, 약 6.7배), 매일 정해진 시각에 안정적으로 알림 전송</td></tr>
+</table>
+</div>
+
+<div class="keep">
+<h3>🏢 셈스게임즈 (SEMS Games)</h3>
+<p class="muted">디지털 트윈 기반 스마트팜 플랫폼으로 사업을 확장</p>
+<table>
+  <tr><th style="width:24%">기간</th><th style="width:24%">직무</th><th>담당</th></tr>
+  <tr><td>2023.03 – 2023.12 (10개월)</td><td>데이터 관리 및 개발 인턴</td><td>IoT 센서 데이터 수집 대시보드 구축</td></tr>
+</table>
+<p><b>활용 기술</b> <span class="chip">Python</span><span class="chip">Arduino</span><span class="chip">Raspberry Pi 4</span><span class="chip">Multiprocessing</span></p>
+<table>
+  <tr><th style="width:12%">구분</th><th>내용</th></tr>
+  <tr><td class="k">문제</td><td>라즈베리파이 단일 프로세스에서 센서 수집과 서버 업로드를 함께 처리 → 전송 지연 시 데이터 혼합·누락</td></tr>
+  <tr><td class="k">해결</td><td>프로세스·I/O 특성을 분석해 수집 루프와 전송 루프를 Multiprocessing으로 분리</td></tr>
+  <tr><td class="k">결과</td><td>I/O 병목 해소, 센서 데이터 적재 누락 0건</td></tr>
+</table>
+</div>
+
+<h3>📁 기타 경력</h3>
+<table>
+  <tr><th style="width:24%">기간</th><th style="width:22%">회사</th><th>직무</th></tr>
+  <tr><td>2025.05 – 2025.12</td><td>숭신여자고등학교</td><td>디지털 튜터 (교내 기기·계정 관리, 네트워크 연결 및 SW 동아리 수업 진행)</td></tr>
+  <tr><td>2024.05 – 2024.11</td><td>한국신제품인증협회</td><td>사원 (CS, 사무 지원, 신제품 웹진 제작·배포)</td></tr>
+</table>
+
+<hr>
+<div class="keep">
+<h2>Projects</h2>
+<h3>1. TechX 그룹웨어 — 실시간 사내 협업 플랫폼</h3>
+<table>
+  <tr><th style="width:24%">기간</th><th style="width:10%">팀</th><th>링크</th></tr>
+  <tr><td>2025.04 – 2025.05</td><td>6인</td><td>GitHub</td></tr>
+</table>
+<p><b>활용 기술</b> <span class="chip">Spring Boot</span><span class="chip">WebRTC</span><span class="chip">STOMP/SockJS</span><span class="chip">JWT</span><span class="chip">Spring Security</span></p>
+<p><b>트러블슈팅 — 간헐적 P2P 연결 실패</b></p>
+<table>
+  <tr><th style="width:12%">구분</th><th>내용</th></tr>
+  <tr><td class="k">문제</td><td>일부 접속에서만 간헐적으로 P2P 연결 실패</td></tr>
+  <tr><td class="k">원인</td><td>네트워크 지연으로 setRemoteDescription 완료 전에 도착한 ICE Candidate가 버려짐</td></tr>
+  <tr><td class="k">해결</td><td>원격 세션 준비 전 수신된 후보를 Candidate Queue에 임시 적재 → 설정 완료 시점에 순차 처리하도록 상태 흐름 개선</td></tr>
+</table>
+<p><b>[인증 및 동시성 제어]</b></p>
+<ul>
+  <li>Access / Refresh / QR 토큰을 용도별로 분리, 커스텀 필터와 토큰 블랙리스트로 탈취 토큰 재사용 차단</li>
+  <li>회의실·비품 예약에 DB 레벨 조건문과 @Transactional을 적용해 시간 중복 예약 방지</li>
+</ul>
+</div>
+
+<div class="keep">
+<h3>2. 선견지표 — 선거 정보·모의투표 플랫폼</h3>
+<table>
+  <tr><th style="width:24%">기간</th><th style="width:10%">팀</th><th>수상</th></tr>
+  <tr><td>2025.04 – 2025.05</td><td>6인</td><td>🏆 KDT 한국정보교육원 풀스택 개발 최우수상</td></tr>
+</table>
+<p><b>활용 기술</b> <span class="chip">Spring Boot</span><span class="chip">React</span><span class="chip">Zustand</span><span class="chip">FastAPI</span><span class="chip">Elasticsearch</span><span class="chip">OpenAI API</span><span class="chip">Web3j</span></p>
+<table>
+  <tr><th style="width:22%">구분</th><th>내용</th></tr>
+  <tr><td class="k">RAG 검색 품질 개선</td><td>무응답·환각 원인을 범용 임베딩 모델의 도메인 용어 구분 한계로 규명 → BM25 + Dense 하이브리드 검색, 3단계 폴백 검색 전략</td></tr>
+  <tr><td class="k">비동기 요청 제어</td><td>페이지 전환 시 이전 응답이 최신 상태를 덮어쓰는 레이스 컨디션 → AbortController로 이전 요청 취소</td></tr>
+  <tr><td class="k">그 외</td><td>Google OAuth2 + JWT 인증, Web3j 기반 블록체인/DB 하이브리드 투표</td></tr>
+</table>
+</div>
+
+<div class="keep">
+<h3>3. 캡스톤 — 시맨틱 기반 위치정보 추출 서비스</h3>
+<table>
+  <tr><th style="width:24%">기간</th><th style="width:10%">팀</th><th>수상</th></tr>
+  <tr><td>2023.09 – 2023.12</td><td>2인</td><td>🏆 전북대학교 SW캡스톤디자인 경진대회 우수상</td></tr>
+</table>
+<p><b>활용 기술</b> <span class="chip">Python</span><span class="chip">Sentence-Transformers</span><span class="chip">KLUE-BERT</span><span class="chip">DPR</span><span class="chip">Flask</span></p>
+<p>자연어 위치 질의("공대 7호관 옆 흡연구역")를 지도 위 관심지점(POI)으로 연결. POI 9종에 좌표·설명 텍스트를 매핑해 학습 데이터를 직접 구축하고, DPR 방식으로 KLUE-BERT 기반 Sentence-BERT를 파인튜닝해 웹 서비스로 완성</p>
+</div>
+
+<hr>
+<h2>Education &amp; Activities</h2>
+<table>
+  <tr><th style="width:22%">기간</th><th>내용</th></tr>
+  <tr><td>2019.03 – 2024.02</td><td>🎓 <b>전북대학교 IT정보공학과 학사 졸업</b> · 전체 학점 3.35 / 4.5</td></tr>
+  <tr><td>2024.11 – 2025.05</td><td>🎓 KDT 클라우드 활용 풀스택 개발 과정 수료 (Java · Spring Boot · React)</td></tr>
+  <tr><td>2024.01</td><td>🚀 AWS DeepRacer 자율주행 강화학습 동계 빅데이터 캠프</td></tr>
+  <tr><td>2022.08 – 2022.11</td><td>🔬 전북대학교 CV연구실 학부연구 — 중소벤처기업부 R&amp;D 과제 참여, 연구노트 작성</td></tr>
+  <tr><td>2022.04 – 2022.12</td><td>🚀 한이음 ICT 멘토링 프로젝트 — 산학 멘토링 기반 ICT 실무 프로젝트</td></tr>
+  <tr><td>2022.01 – 2022.09</td><td>🚀 42 SEOUL 본과정 진행</td></tr>
+  <tr><td>2022.08</td><td>🎓 AWS Technical Essentials 교육 수료</td></tr>
+</table>
+
+<div class="keep">
+<h2>Awards</h2>
+<table>
+  <tr><th style="width:12%">시기</th><th style="width:13%">수상</th><th>내용</th></tr>
+  <tr><td>2025.05</td><td>🥇 최우수상</td><td><b>KDT 한국정보교육원 풀스택 개발 프로젝트</b> — 선거 정보·모의투표 플랫폼 '선견지표' (한국정보교육원)</td></tr>
+  <tr><td>2023.12</td><td>🥈 우수상</td><td><b>2023-2 SW캡스톤디자인 경진대회</b> — 시맨틱 기반 위치정보 추정 기술 개발 (전북대학교 SW중심대학사업단)</td></tr>
+  <tr><td>2023.12</td><td>🏅 장려상</td><td><b>제1회 SW 창업 아이디어 경진대회</b> — '나다: AI와 공유하는 나만의 다이어리' (전북대학교 SW중심대학사업단)</td></tr>
+  <tr><td>2020.12</td><td>🥉 동상</td><td><b>2020 IT정보공학과 설계작품경진대회</b> — 'IT알리미' (전북대학교 IT정보공학과)</td></tr>
+</table>
+</div>
+
+<div class="keep">
+<h2>Certification</h2>
+<table>
+  <tr><th style="width:16%">취득</th><th style="width:42%">자격</th><th>발급 기관</th></tr>
+  <tr><td>2021.04</td><td><b>SQLD (SQL 개발자)</b></td><td>한국데이터산업진흥원</td></tr>
+  <tr><td>2026.02</td><td><b>OPIc IM2 (영어)</b></td><td>ACTFL</td></tr>
+</table>
+<p class="muted"><i>증빙: 상장인증서.pdf, 자격및교육증명서.pdf</i></p>
+</div>
+
+<hr>
+<div class="keep closing">
+<h2 style="color:var(--ink)">감사합니다.</h2>
+<div class="note">
+  <p>끝까지 읽어주셔서 진심으로 감사드립니다.</p>
+  <p>저는 낯선 문제 앞에서도 기초 원리부터 짚어 원인을 규명하는 방식으로 일해 왔습니다. 금융정보분석원 시스템을 운영하며 '오류'로 보고된 현상이 의도된 보안 기능임을 밝혀내고, SSL 인증서 교체와 웹 접근성 인증을 진행하며 작은 설정 하나가 고객 서비스 전체의 신뢰로 이어진다는 것을 체감했습니다.</p>
+  <p>입사 후에는 보안 솔루션이 금융 고객사의 다양한 환경에서도 안정적으로 동작하도록, 이슈를 끝까지 재현·분석하고 고객과 개발 조직 사이를 정확하게 잇는 Technical Quality Engineer가 되겠습니다.</p>
+  <p>먼저 맡은 일을 책임감 있게 해내는 신뢰받는 구성원이 되고, 현장에서 쌓은 노하우는 문서와 공유로 팀의 품질 자산으로 남기겠습니다.</p>
+</div>
+<ul>
+  <li>📱 <b>Phone</b> · 010-4850-5772</li>
+  <li>📧 <b>E-mail</b> · mileui73@gmail.com</li>
+  <li>💻 <b>GitHub</b> · <a href="https://github.com/lalala5772">github.com/lalala5772</a></li>
+</ul>
+</div>
+
+</body>
+</html>
