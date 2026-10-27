@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>이미르 · 포트폴리오</title>
+<style>
+@font-face{font-family:"NotoKR";font-weight:400;src:url(fonts/noto-sans-kr-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212}
+@font-face{font-family:"NotoKR";font-weight:500;src:url(fonts/noto-sans-kr-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212}
+@font-face{font-family:"NotoKR";font-weight:700;src:url(fonts/noto-sans-kr-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212}
+@font-face{font-family:"NotoKR";font-weight:400;src:url(fonts/noto-sans-kr-korean-400-normal.woff2) format("woff2")}
+@font-face{font-family:"NotoKR";font-weight:500;src:url(fonts/noto-sans-kr-korean-500-normal.woff2) format("woff2")}
+@font-face{font-family:"NotoKR";font-weight:700;src:url(fonts/noto-sans-kr-korean-700-normal.woff2) format("woff2")}
+
+:root{--blue:#2f80ed;--blue2:#1f6fe0;--lb:#eaf3fe;--ink:#1f2329;--sub:#5b6470;--line:#d6dce4;--grey:#f2f4f6;--grey2:#9aa3ad;--navy:#1f2329}
+@page{size:1280px 720px;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff}
+body{font-family:"NotoKR",sans-serif;color:var(--ink);font-size:15px;line-height:1.5;word-break:keep-all}
+.slide{width:1280px;height:720px;position:relative;overflow:hidden;padding:30px 56px 0;page-break-after:always;background:#fff}
+.slide:last-child{page-break-after:auto}
+.eyebrow{color:var(--blue);font-weight:700;font-size:13px;margin-bottom:6px}
+.title{font-size:25px;font-weight:700;line-height:1.38;margin:0 0 26px}
+.foot{position:absolute;left:56px;right:56px;bottom:18px;font-size:10px;color:var(--grey2);display:flex;justify-content:space-between}
+.blue{color:var(--blue)}
+.b{font-weight:700}
+.muted{color:var(--sub)}
+.small{font-size:12.5px}
+.row{display:flex;gap:20px}
+.col{flex:1;min-width:0}
+.box{border:1px solid var(--line);border-radius:4px;padding:12px 16px;background:#fff}
+.lbox{background:var(--lb);border-radius:4px;padding:12px 16px}
+.gbox{background:var(--grey);border-radius:4px;padding:12px 16px}
+.bar{background:var(--navy);color:#fff;font-weight:700;text-align:center;padding:9px;font-size:14px;border-radius:2px}
+.bbar{background:var(--blue);color:#fff;font-weight:700;text-align:center;padding:9px;font-size:14px;border-radius:2px}
+.sec{font-weight:700;font-size:15px;border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:12px}
+.sec.blue{border-color:var(--blue)}
+.num{display:inline-flex;width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;font-size:12px;align-items:center;justify-content:center;flex:none}
+.numo{display:inline-flex;width:24px;height:24px;border-radius:50%;border:1.5px solid var(--blue);color:var(--blue);font-weight:700;font-size:12px;align-items:center;justify-content:center;flex:none;background:#fff}
+.li{display:flex;gap:12px;align-items:center;margin:0 0 10px}
+.arrow{color:#b7bfc9;font-size:24px;display:flex;align-items:center;justify-content:center}
+.chip{display:inline-block;background:var(--grey);border-radius:3px;padding:1px 8px;margin:2px 3px 2px 0;font-size:12px}
+.chipb{display:inline-block;background:var(--lb);color:var(--blue2);border-radius:3px;padding:1px 8px;margin:2px 3px 2px 0;font-size:12px;font-weight:500}
+ul.dot{margin:0;padding-left:18px}
+ul.dot li{margin:3px 0}
+table.t{width:100%;border-collapse:collapse;font-size:13.5px}
+table.t th,table.t td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+table.t th{background:var(--grey);font-weight:700;border-top:2px solid var(--ink)}
+table.t td.k{font-weight:700;white-space:nowrap;width:150px}
+</style>
+</head>
+<body>
+
+<!-- 1. Cover -->
+<section class="slide" style="padding:60px 80px">
+  <div class="eyebrow" style="margin-top:20px">PORTFOLIO · AI 솔루션 · 풀스택 · 유지보수 개발</div>
+  <div style="font-size:44px;font-weight:700;line-height:1.35;margin-top:28px">만들고, 연결하고,<br><span class="blue">끝까지 운영하는 개발자</span></div>
+  <div class="gbox" style="display:inline-block;margin-top:36px;padding:14px 22px;font-size:16px">웹 서비스 개발부터 AI 연동, 운영 환경의 유지보수까지 하나의 흐름으로 다루는 엔지니어</div>
+  <div style="border-top:1px solid var(--line);width:600px;margin-top:44px"></div>
+  <div style="font-size:28px;font-weight:700;margin-top:26px">이미르</div>
+  <div style="font-size:14px;margin-top:8px"><span class="blue b">Email</span> mileui73@gmail.com &nbsp;·&nbsp; <span class="blue b">Mobile</span> 010-4850-5772 &nbsp;·&nbsp; <span class="blue b">GitHub</span> github.com/lalala5772</div>
+  <div style="font-size:13px;margin-top:6px" class="muted">전북대학교 IT정보공학과 학사 졸업 (2019.03 – 2024.02 · 3.35/4.5)</div>
+  <div style="position:absolute;left:80px;bottom:40px;font-size:12px;color:var(--grey2)">2026. 10</div>
+</section>
+
+<!-- 2. Career Vision & Journey -->
+<section class="slide">
+  <div class="eyebrow">Career Vision &amp; Journey</div>
+  <div class="title">데이터를 모으는 일에서 시작해, 서비스를 만들고 AI를 연결하고<br>운영하는 일까지 경험을 넓혀왔습니다</div>
+  <div class="row" style="gap:36px">
+    <div style="width:430px;border:1px solid var(--blue)">
+      <div class="bbar" style="border-radius:0">Career Vision</div>
+      <div style="padding:16px 20px">
+        <div class="blue b" style="text-align:center;font-size:18px;line-height:1.4">“만든 것이 현장에서 끝까지<br>동작하게 하는 개발자”</div>
+        <img src="vis-000.jpg" style="display:block;width:170px;height:105px;object-fit:cover;margin:12px auto 12px">
+        <div class="gbox li" style="padding:9px 14px;margin-bottom:8px"><span class="blue b" style="width:44px">개발</span><span class="small">웹 서비스를 직접 설계하고 구현하기</span></div>
+        <div class="gbox li" style="padding:9px 14px;margin-bottom:8px"><span class="blue b" style="width:44px">연결</span><span class="small">업무·지식·시스템을 AI와 잇기</span></div>
+        <div class="gbox li" style="padding:9px 14px;margin:0"><span class="blue b" style="width:44px">운영</span><span class="small">운영 환경에서 안정적으로 지키고 다듬기</span></div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="sec">Career Journey</div>
+      <div id="journey">
+        <div class="li" style="margin-bottom:9px"><div class="jd">'19.03<br>~ '24.02</div><div><div class="b">전북대학교 | IT정보공학과 학사 졸업</div><div class="small muted">학점 3.35 / 4.5 · SW캡스톤디자인 우수상 · CV연구실 학부연구</div></div></div>
+        <div class="li" style="margin-bottom:9px"><div class="jd">'23.03<br>~ '23.12</div><div><div class="b">셈스게임즈 | 데이터 관리·개발 인턴</div><div class="small muted">IoT 센서 수집·전송 프로세스 분리로 적재 누락 0건</div></div></div>
+        <div class="li" style="margin-bottom:9px"><div class="jd">'24.11<br>~ '25.05</div><div><div class="b">KDT 풀스택 과정 | 팀 프로젝트</div><div class="small muted">Spring Boot · React 서비스 2건, RAG 챗봇 · 최우수상</div></div></div>
+        <div class="li" style="margin-bottom:9px"><div class="jd on">'26.05<br>~ '26.07</div><div><div class="b">올림플래닛 | 사업운영 프로</div><div class="small muted">LLM 입찰공고 판정 시스템 구축·운영 (88초 → 13초)</div></div></div>
+        <div class="li" style="margin-bottom:0"><div class="jd on">'26.09<br>~ 현재</div><div><div class="b">올포랜드 | 개발직군 인턴</div><div class="small muted">금융정보분석원(FIU) 정보시스템 유지보수·운영 · SSL·웹 접근성 인증 대응</div></div></div>
+      </div>
+    </div>
+  </div>
+  <style>.jd{width:78px;flex:none;border:1px solid var(--blue);color:var(--blue);font-weight:700;font-size:11.5px;text-align:center;padding:7px 0;line-height:1.35}.jd.on{background:var(--blue);color:#fff}</style>
+  <div class="foot"><span>이미르 · Portfolio</span><span>2</span></div>
+</section>
+
+<!-- 3. Key Strength overview -->
+<section class="slide">
+  <div class="eyebrow">Key Strength</div>
+  <div class="title">서비스를 만들고, AI를 연결하고, 운영 환경에서 지키는 일을<br>세 가지 강점으로 직접 해보았습니다</div>
+  <div class="row" style="gap:40px">
+    <div style="width:520px">
+      <div class="row" style="gap:10px;align-items:stretch">
+        <div class="box" style="flex:1;text-align:center;padding:18px 8px"><span class="num">1</span><div class="b" style="margin-top:8px">AI 솔루션</div><div class="small muted">현장 문제를<br>AI 업무로 연결</div></div>
+        <div class="box" style="flex:1;text-align:center;padding:18px 8px"><span class="num">2</span><div class="b" style="margin-top:8px">풀스택 개발</div><div class="small muted">서비스를<br>처음부터 끝까지</div></div>
+        <div class="box" style="flex:1;text-align:center;padding:18px 8px"><span class="num">3</span><div class="b" style="margin-top:8px">운영·유지보수</div><div class="small muted">운영 중인 시스템을<br>안정적으로</div></div>
+      </div>
+      <div class="gbox" style="margin-top:22px;padding:16px">
+        <div class="b" style="text-align:center;margin-bottom:12px">요구 정리부터 운영 개선까지 하나의 흐름으로</div>
+        <div class="row" style="gap:6px">
+          <div style="flex:1;background:#7d8590;color:#fff;text-align:center;padding:9px 0;font-size:13px;font-weight:500">요구 → 기술 요건</div>
+          <div style="flex:1;background:#7d8590;color:#fff;text-align:center;padding:9px 0;font-size:13px;font-weight:500">설계 · 구현</div>
+          <div style="flex:1;background:#7d8590;color:#fff;text-align:center;padding:9px 0;font-size:13px;font-weight:500">연동 · 배포</div>
+          <div style="flex:1;background:var(--blue);color:#fff;text-align:center;padding:9px 0;font-size:13px;font-weight:500">운영 · 개선</div>
+        </div>
+      </div>
+      <div class="lbox small" style="margin-top:16px;line-height:1.7">
+        <span class="b">공통된 일하는 방식</span> — 낯선 문제도 기초 원리에서 출발해 원인을 확인하고, 현업 담당자와 직접 소통하며, 결과를 문서로 남겨 팀과 공유합니다.
+      </div>
+    </div>
+    <div class="col">
+      <div class="sec">Key Strength</div>
+      <div style="margin-bottom:16px"><div class="li" style="margin-bottom:6px"><span class="num">1</span><div class="box blue b" style="flex:1;text-align:center;border-color:var(--blue);padding:8px">현장 문제를 AI 업무로 연결</div></div><div class="small muted" style="text-align:center">LLM 입찰공고 판정 시스템 구축·운영 (85% 단축) · 하이브리드 검색 RAG 챗봇</div></div>
+      <div style="margin-bottom:16px"><div class="li" style="margin-bottom:6px"><span class="num">2</span><div class="box blue b" style="flex:1;text-align:center;border-color:var(--blue);padding:8px">서비스를 처음부터 끝까지 만드는 풀스택 개발</div></div><div class="small muted" style="text-align:center">Spring Boot · React 서비스 2건 · 인증 · 실시간 통신 · KDT 최우수상</div></div>
+      <div><div class="li" style="margin-bottom:6px"><span class="num">3</span><div class="box blue b" style="flex:1;text-align:center;border-color:var(--blue);padding:8px">운영 중인 금융권 시스템의 유지보수</div></div><div class="small muted" style="text-align:center">FIU 서버 페이징 전환 · SSL 인증서 교체 · 웹 접근성(WA) 인증 · 보안 조치</div></div>
+    </div>
+  </div>
+  <div class="foot"><span>이미르 · Portfolio</span><span>3</span></div>
+</section>
+
+<!-- 4. AI 1: 문제 → 요건 -->
+<section class="slide">
+  <div class="eyebrow">Key Strength 1 – 현장 문제를 AI 업무로 연결 &nbsp;|&nbsp; 나라장터 입찰공고 AI 판정 시스템</div>
+  <div class="title">사업운영 직무에서 매일 반복되던 공고 확인 업무를 직접 기술 요건으로 정리하고,<br>LLM 판정 시스템으로 바꿔 업무 시간을 효율적으로 단축</div>
+  <div class="row" style="gap:30px">
+    <div style="width:330px">
+      <div class="blue b" style="text-align:center;margin-bottom:8px">현업의 문제</div>
+      <div class="bar">Before — 담당자의 공고 확인</div>
+      <div class="box" style="border-top:0;padding:14px 16px">
+        <div class="li"><span class="numo">1</span><span class="small">여러 키워드로 나라장터 직접 검색</span></div>
+        <div class="li"><span class="numo">2</span><span class="small">공고를 하나씩 열어 내용 확인</span></div>
+        <div class="li"><span class="numo">3</span><span class="small">사업 관련성을 사람이 판단</span></div>
+        <div class="li"><span class="numo">4</span><span class="small">참여할 만한 공고 정리·공유</span></div>
+        <div class="lbox" style="margin-top:6px"><div class="small muted">소요 시간</div><div class="blue b" style="font-size:20px">매일 오전의 약 절반 소요</div></div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="blue b" style="text-align:center;margin-bottom:8px">요구 → 기술 요건 정리</div>
+      <div class="row small" style="gap:0;margin-bottom:6px"><div style="width:280px" class="muted">현업의 요구</div><div style="width:50px"></div><div class="col blue b">기술 요건</div></div>
+      <div class="req"><div class="r1">관련 공고를 빠짐없이 보고 싶다</div><div class="arrow">➡</div><div class="r2">자사 솔루션 유관 13개 키워드로 나라장터 Open API 조회</div></div>
+      <div class="req"><div class="r1">사람이 하던 판단을 대신해 줬으면</div><div class="arrow">➡</div><div class="r2">Claude가 공고별 적격 여부를 판단하고 점수화</div></div>
+      <div class="req"><div class="r1">꼭 봐야 할 공고만 받고 싶다</div><div class="arrow">➡</div><div class="r2">기준 점수 이상 공고만 선별</div></div>
+      <div class="req"><div class="r1">매일 아침, 쓰던 메신저로</div><div class="arrow">➡</div><div class="r2">일일 배치 실행 + Google Chat 웹훅 알림</div></div>
+      <div class="small muted" style="text-align:right;margin-top:6px">※ 기획 · 개발 · 운영 · 개선 수행 (2026.05 – 2026.07, Python)</div>
+    </div>
+  </div>
+  <style>.req{display:flex;gap:0;margin-bottom:12px;align-items:stretch}.req .r1{width:280px;background:var(--grey);padding:14px 16px;font-size:13.5px;display:flex;align-items:center}.req .arrow{width:50px}.req .r2{flex:1;background:var(--lb);padding:14px 16px;font-size:13.5px;font-weight:700;display:flex;align-items:center}</style>
+  <div class="foot"><span>이미르 · Portfolio</span><span>4</span></div>
+</section>
+
+<!-- 5. AI 1: 설계 -->
+<section class="slide">
+  <div class="eyebrow">Key Strength 1 – 현장 문제를 AI 업무로 연결 &nbsp;|&nbsp; 시스템 설계</div>
+  <div class="title">판단이 필요한 부분은 LLM에, 최종 선별은 점수 규칙에 맡겨<br>알림 결과를 통제할 수 있는 파이프라인으로 설계</div>
+  <div class="row" style="gap:8px;align-items:stretch;margin-top:10px">
+    <div class="step"><div class="sn">STEP 1</div><div class="st">일일 배치</div><div class="sd">정해진 시각에<br>자동 실행</div></div><div class="arrow">➡</div>
+    <div class="step"><div class="sn">STEP 2</div><div class="st">공고 수집</div><div class="sd">나라장터 Open API<br>13개 키워드 조회</div></div><div class="arrow">➡</div>
+    <div class="step on"><div class="sn">STEP 3</div><div class="st">AI 판정</div><div class="sd">Claude API<br>공고별 적격 판단·점수<br>(최대 20건)</div></div><div class="arrow">➡</div>
+    <div class="step"><div class="sn">STEP 4</div><div class="st">선별</div><div class="sd">기준 점수 이상<br>공고만 통과</div></div><div class="arrow">➡</div>
+    <div class="step"><div class="sn">STEP 5</div><div class="st">알림</div><div class="sd">Google Chat<br>웹훅 전송</div></div>
+  </div>
+  <div class="sec" style="margin-top:34px">설계 판단</div>
+  <div class="row" style="gap:36px">
+    <div class="col"><div class="blue b" style="margin-bottom:6px">역할 분리</div><div class="small">애매한 판단(관련성)은 LLM이, 통과 여부는 점수 기준이라는 명확한 규칙이 결정해 결과를 예측·조정 가능하게</div></div>
+    <div class="col"><div class="blue b" style="margin-bottom:6px">노이즈 최소화</div><div class="small">모든 공고가 아니라 기준 점수를 넘은 공고만 보내, 담당자가 알림을 신뢰하고 바로 행동할 수 있게</div></div>
+    <div class="col"><div class="blue b" style="margin-bottom:6px">기존 업무 도구 활용</div><div class="small">새 화면을 만들지 않고 담당자가 이미 쓰는 Google Chat으로 전달해 도입 부담 제거</div></div>
+  </div>
+  <style>.step{flex:1;background:var(--grey);border-radius:4px;padding:16px 16px 22px}.step .sn{color:var(--blue);font-weight:700;font-size:11.5px}.step .st{font-weight:700;font-size:19px;margin:6px 0 12px}.step .sd{font-size:13px;color:var(--sub)}.step.on{background:var(--blue)}.step.on .sn,.step.on .st,.step.on .sd{color:#fff}.row>.arrow{width:24px;flex:none}</style>
+  <div class="foot"><span>이미르 · Portfolio</span><span>5</span></div>
+</section>
+
+<!-- 6. AI 1: 운영 중 개선 + 결과 -->
+<section class="slide">
+  <div class="eyebrow">Key Strength 1 – 현장 문제를 AI 업무로 연결 &nbsp;|&nbsp; 운영 중 개선과 결과</div>
+  <div class="title">운영 중 드러난 88초의 실행 시간을 네트워크 I/O 대기로 진단하고,<br>Rate Limit 범위 안에서 병렬화해 13초로 단축</div>
+  <div class="row" style="gap:30px">
+    <div style="width:560px">
+      <div class="gbox" style="padding:14px 18px">
+        <div class="b">Before</div><div class="small muted">순차 처리 — 한 번에 한 요청씩</div>
+        <div style="display:flex;align-items:center;gap:16px;margin-top:10px">
+          <div style="display:flex;height:26px;flex:1"><div style="width:18%;background:#b8c0ca;margin-right:2px"></div><div style="width:18%;background:#b8c0ca;margin-right:2px"></div><div style="flex:1;background:var(--blue)"></div></div>
+          <div class="blue b" style="font-size:30px;width:80px;text-align:right">88초</div>
+        </div>
+      </div>
+      <div class="lbox" style="padding:14px 18px;margin-top:12px">
+        <div class="b">After</div><div class="small muted">병렬 처리 — 제한된 워커가 동시에 (Rate Limit 범위 내)</div>
+        <div style="display:flex;align-items:center;gap:16px;margin-top:10px">
+          <div style="width:110px">
+            <div style="display:flex;height:9px;margin-bottom:2px"><div style="width:22%;background:#b8c0ca"></div><div style="flex:1;background:var(--blue)"></div></div>
+            <div style="display:flex;height:9px;margin-bottom:2px"><div style="width:22%;background:#b8c0ca"></div><div style="flex:1;background:var(--blue)"></div></div>
+            <div style="display:flex;height:9px"><div style="width:22%;background:#b8c0ca"></div><div style="flex:1;background:var(--blue)"></div></div>
+          </div>
+          <div class="small muted" style="flex:1">워커 N개 동시 처리</div>
+          <div class="blue b" style="font-size:30px;width:80px;text-align:right">13초</div>
+        </div>
+      </div>
+      <div class="row" style="gap:12px;margin-top:14px">
+        <div class="bbar col" style="font-size:16px;padding:12px">약 85% 단축 · 약 6.7배</div>
+      </div>
+      <div class="row small" style="gap:12px;margin-top:12px">
+        <div class="gbox col"><div class="muted">Before</div><div class="b">오전의 절반을 공고 검색·확인에</div></div>
+        <div class="arrow">➡</div>
+        <div class="lbox col"><div class="muted">After</div><div class="b blue">아침에 도착한 알림만 확인</div></div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="bar">원인 진단 — I/O Bound</div>
+      <ul class="dot small" style="margin:10px 0 14px">
+        <li>실행 시간 대부분이 외부 API 응답 대기</li>
+        <li>공고별 판정은 서로 독립된 작업</li>
+        <li>공고당 수 초 걸리는 LLM 판정이 최대 병목</li>
+      </ul>
+      <div class="box" style="border-color:var(--blue);margin-bottom:8px"><div class="blue b">스레드 기반 병렬화</div><div class="small">대기 중심 작업이므로 ThreadPoolExecutor로 API 조회·LLM 판정을 동시 처리</div></div>
+      <div class="box" style="border-color:var(--blue);margin-bottom:8px"><div class="blue b">동시 실행 수 제한</div><div class="small">Rate Limit을 고려해 워커 수를 제한, 안정성과 속도의 균형</div></div>
+      <div class="box" style="border-color:var(--blue)"><div class="blue b">다음 단계</div><div class="small">키워드·판정 기준·알림 채널을 설정으로 분리하고, 담당자 피드백으로 오탐·누락을 측정하는 품질 루프 설계</div></div>
+    </div>
+  </div>
+  <div class="foot"><span>이미르 · Portfolio</span><span>6</span></div>
+</section>
+
+<!-- 7. AI 2: RAG + DPR -->
+<section class="slide">
+  <div class="eyebrow">Key Strength 1 – 현장 문제를 AI 업무로 연결 &nbsp;|&nbsp; 지식을 AI가 쓰는 형태로 가공</div>
+  <div class="title">범용 모델이 도메인 지식을 잘 다루지 못하는 한계를,<br>검색 구조와 학습 데이터를 직접 설계해 보완했습니다</div>
+  <div class="row" style="gap:30px">
+    <div class="col">
+      <div class="bar">선견지표 RAG 챗봇 · KDT 최우수상</div>
+      <div class="lbox small" style="margin:10px 0"><span class="blue b">문제</span> 범용 임베딩(MiniLM)이 한국어 정치·정책 용어를 잘 구분하지 못해 무응답·환각 발생</div>
+      <div class="flow"><div class="fk">① 하이브리드 검색</div><div class="fv">BM25 키워드 + 384차원 Dense 벡터, 질문 의도에 따라 인덱스·가중치 조정</div></div>
+      <div class="fdown">실패 시 ↓</div>
+      <div class="flow"><div class="fk">② 쿼리 확장</div><div class="fv">검색 실패 시 질의를 확장해 재검색</div></div>
+      <div class="fdown">실패 시 ↓</div>
+      <div class="flow"><div class="fk">③ 키워드 폴백</div><div class="fv">그래도 실패하면 키워드 검색으로 응답 근거 확보</div></div>
+      <div class="blue b small" style="margin-top:10px">→ 무응답·환각 최소화 · FastAPI로 챗봇 서빙</div>
+    </div>
+    <div class="col">
+      <div class="bar">시맨틱 위치정보 추정 · 캡스톤 우수상</div>
+      <div class="lbox small" style="margin:10px 0"><span class="blue b">문제</span> “공대 7호관 옆 흡연구역” 같은 자연어 위치 질의는 표현이 제각각이라 키워드 일치로 찾기 어려움</div>
+      <div class="flow"><div class="fk">지식 구축</div><div class="fv">캠퍼스 POI 9종에 좌표 + 위치 설명 텍스트 매핑</div></div>
+      <div class="fdown">↓</div>
+      <div class="flow"><div class="fk">학습 데이터</div><div class="fv">질의 · 정답 문서 · 오답 문서 쌍으로 직접 구성</div></div>
+      <div class="fdown">↓</div>
+      <div class="flow"><div class="fk">DPR 학습</div><div class="fv">KLUE-BERT 기반 SBERT를 추가 학습해 의미 유사도로 POI 검색</div></div>
+      <div class="blue b small" style="margin-top:10px">→ Flask 서버 + 지도 클라이언트로 질의 위치 표시</div>
+    </div>
+  </div>
+  <style>.flow{display:flex;border:1px solid var(--line);border-radius:4px;align-items:center}.flow .fk{width:130px;flex:none;color:var(--blue);font-weight:700;font-size:13px;padding:10px 14px}.flow .fv{font-size:13px;padding:10px 14px}.fdown{text-align:right;font-size:10px;color:var(--grey2);margin:1px 8px}</style>
+  <div class="foot"><span>이미르 · Portfolio</span><span>7</span></div>
+</section>
+
+<!-- 8. Full-stack -->
+<section class="slide">
+  <div class="eyebrow">Key Strength 2 – 서비스를 처음부터 끝까지 &nbsp;|&nbsp; 풀스택 팀 프로젝트</div>
+  <div class="title">인증, 상태 관리, 실시간 통신, 동시성 제어까지<br>백엔드와 프론트엔드를 오가며 서비스를 직접 완성했습니다</div>
+  <div class="row" style="gap:30px">
+    <div class="col">
+      <div class="bar">선견지표 — 선거 정보·모의투표 플랫폼 · 최우수상</div>
+      <div class="row" style="gap:6px;margin:12px 0;align-items:stretch">
+        <div class="layer">React<br><span>Zustand</span></div><div class="arrow" style="width:18px;font-size:16px">⇄</div>
+        <div class="layer on">Spring Boot<br><span>Security · JWT</span></div><div class="arrow" style="width:18px;font-size:16px">⇄</div>
+        <div class="layer">FastAPI<br><span>RAG 챗봇</span></div><div class="arrow" style="width:18px;font-size:16px">⇄</div>
+        <div class="layer">Elasticsearch<br><span>Web3j</span></div>
+      </div>
+      <table class="t">
+        <tr><td class="k" style="width:110px">인증</td><td>Google OAuth2 + JWT 로그인, 전역 로그인 상태를 Zustand로 관리</td></tr>
+        <tr><td class="k" style="width:110px">비동기 제어</td><td>페이지 전환 시 이전 응답이 최신 상태를 덮어쓰는 레이스 컨디션 → AbortController로 이전 요청 취소</td></tr>
+        <tr><td class="k" style="width:110px">투표</td><td>Web3j 기반 블록체인/DB 하이브리드 투표 구조</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <div class="bar">TechX 그룹웨어 — 실시간 사내 협업 플랫폼</div>
+      <div class="row" style="gap:6px;margin:12px 0;align-items:stretch">
+        <div class="layer">Peer A<br><span>브라우저</span></div><div class="arrow" style="width:18px;font-size:16px">⇄</div>
+        <div class="layer on" style="flex:2">시그널링 서버 (직접 구현)<br><span>Spring Boot · STOMP/SockJS</span></div><div class="arrow" style="width:18px;font-size:16px">⇄</div>
+        <div class="layer">Peer B<br><span>브라우저</span></div>
+      </div>
+      <table class="t">
+        <tr><td class="k" style="width:110px">화상회의</td><td>WebRTC Mesh 다자간 화상회의, 원격 세션 준비 전 도착한 ICE 후보를 큐로 관리해 연결 안정화</td></tr>
+        <tr><td class="k" style="width:110px">인증</td><td>Access / Refresh / QR 토큰 분리, 커스텀 필터와 블랙리스트로 탈취 토큰 재사용 차단</td></tr>
+        <tr><td class="k" style="width:110px">동시성</td><td>회의실·비품 예약에 DB 조건문과 @Transactional 적용해 시간 중복 예약 방지</td></tr>
+      </table>
+    </div>
+  </div>
+  <style>.layer{flex:1;border:1px solid var(--line);border-radius:4px;text-align:center;font-weight:700;font-size:13px;padding:8px 4px;background:var(--grey)}.layer span{font-weight:400;font-size:11.5px;color:var(--sub)}.layer.on{background:var(--blue);color:#fff;border-color:var(--blue)}.layer.on span{color:#e3eefc}</style>
+  <div class="foot"><span>이미르 · Portfolio</span><span>8</span></div>
+</section>
+
+<!-- 9. Maintenance 1: 서버 페이징 -->
+<section class="slide">
+  <div class="eyebrow">Key Strength 3 – 운영 중인 시스템을 안정적으로 &nbsp;|&nbsp; 금융정보분석원(FIU) 대민 게시판</div>
+  <div class="title">데이터가 쌓일수록 느려지던 대민 게시판을,<br>쿼리 내 조건 분기와 서버 페이징으로 전환했습니다</div>
+  <div class="row" style="gap:30px">
+    <div class="col">
+      <div class="bar" style="background:#7d8590">Before — 클라이언트에서 전체 목록 처리</div>
+      <div class="box" style="border-top:0">
+        <div class="li"><span class="numo">1</span><span class="small">게시판 진입 시 전체 목록을 한 번에 조회</span></div>
+        <div class="li"><span class="numo">2</span><span class="small">탭 구분과 페이지 분할을 클라이언트 스크립트가 처리</span></div>
+        <div class="li"><span class="numo">3</span><span class="small">게시물이 누적될수록 응답·렌더링 지연</span></div>
+        <div class="li" style="margin:0"><span class="numo">4</span><span class="small">보지 않는 데이터까지 매번 전송</span></div>
+      </div>
+    </div>
+    <div class="arrow" style="width:30px">➡</div>
+    <div class="col">
+      <div class="bbar">After — 서버에서 필요한 페이지만 조회</div>
+      <div class="box" style="border-top:0;border-color:var(--blue)">
+        <div class="li"><span class="num">1</span><span class="small">MyBatis 쿼리에 탭 조건 분기 추가</span></div>
+        <div class="li"><span class="num">2</span><span class="small">Tibero 기반 서버 페이징 구현</span></div>
+        <div class="li"><span class="num">3</span><span class="small">클라이언트 탭 분기 로직을 서버 요청 방식으로 수정</span></div>
+        <div class="li" style="margin:0"><span class="num">4</span><span class="small">사용자가 위치한 페이지의 목록만 응답</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="gap:16px;margin-top:22px">
+    <div class="gbox col small"><span class="b">수행 범위</span> — 현행 분석 → 쿼리·화면 수정 → 개발서버 테스트 → 배포요청서 작성 → 운영 반영</div>
+    <div class="lbox col small"><span class="b blue">활용 기술</span> &nbsp;<span class="chipb">전자정부프레임워크</span><span class="chipb">JSP</span><span class="chipb">MyBatis</span><span class="chipb">Tibero</span><span class="chipb">SoftManager</span></div>
+  </div>
+  <div class="foot"><span>이미르 · Portfolio</span><span>9</span></div>
+</section>
+
+<!-- 10. Maintenance 2: SSL / WA -->
+<section class="slide">
+  <div class="eyebrow">Key Strength 3 – 운영 중인 시스템을 안정적으로 &nbsp;|&nbsp; 인증·보안 대응</div>
+  <div class="title">서비스를 멈추지 않고 SSL 인증서를 교체하고,<br>웹 접근성(WA) 인증 기준에 맞춰 대민 페이지를 점검·개선했습니다</div>
+  <div class="row" style="gap:30px">
+    <div class="col">
+      <div class="bar">SSL 인증서 교체</div>
+      <div style="margin-top:12px">
+        <div class="flow2"><span class="num">1</span><div><div class="b">일정 확인</div><div class="small muted">인증서 만료 일정과 적용 대상 서버 파악</div></div></div>
+        <div class="flow2"><span class="num">2</span><div><div class="b">교체·적용</div><div class="small muted">신규 인증서를 WEB/WAS에 적용, 체인(중간) 인증서 검증</div></div></div>
+        <div class="flow2"><span class="num">3</span><div><div class="b">검증</div><div class="small muted">개발서버 확인 후 운영 반영, 브라우저별 접속·Mixed Content 점검</div></div></div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="bar">웹 접근성(WA) 인증 대응</div>
+      <div style="margin-top:12px">
+        <div class="flow2"><span class="num">1</span><div><div class="b">점검</div><div class="small muted">KWCAG 기준으로 대민 페이지 진단</div></div></div>
+        <div class="flow2"><span class="num">2</span><div><div class="b">수정</div><div class="small muted">대체 텍스트, 키보드 접근, 입력 서식 레이블, 명도 대비 등 개선</div></div></div>
+        <div class="flow2"><span class="num">3</span><div><div class="b">재검증</div><div class="small muted">수정 결과를 다시 점검하고 담당 주무관과 공유</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="lbox small" style="margin-top:18px"><span class="b blue">보안 조치</span> &nbsp;웹 취약점 점검 결과에 따른 서비스 로직 수정 · 침해사고 대응 지침에 따른 jQuery 버전 분석 · 불필요한 DB 계정·권한 정비 · 점검 기간 안내 팝업 게시</div>
+  <style>.flow2{display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:4px;padding:11px 16px;margin-bottom:10px}</style>
+  <div class="foot"><span>이미르 · Portfolio</span><span>10</span></div>
+</section>
+
+<!-- 11. Maintenance 3: 운영 프로세스 -->
+<section class="slide">
+  <div class="eyebrow">Key Strength 3 – 운영 중인 시스템을 안정적으로 &nbsp;|&nbsp; 운영 프로세스와 협업</div>
+  <div class="title">현업 담당자와 직접 소통하고, 정해진 통제 절차 안에서<br>점검·개발·배포를 반복하며 운영 환경을 지켰습니다</div>
+  <div class="row" style="gap:20px">
+    <div class="col">
+      <div class="box" style="border-color:var(--blue);text-align:center;padding:9px"><span class="blue b">SR 처리 · 배포</span></div>
+      <div class="small muted" style="text-align:center;margin:6px 0 10px">“요구를 직접 듣고, 배포까지 조율합니다”</div>
+      <div class="li"><span class="num">1</span><span class="small">홈페이지 담당 주무관과 직접 요구사항 협의</span></div>
+      <div class="li"><span class="num">2</span><span class="small">분석 · 개발 · 단위/통합 테스트</span></div>
+      <div class="li"><span class="num">3</span><span class="small">DBA · AA 대상 배포요청서 작성·조율</span></div>
+      <div class="li"><span class="num">4</span><span class="small">SoftManager 형상관리 통제 하에 배포</span></div>
+    </div>
+    <div class="col">
+      <div class="box" style="border-color:var(--blue);text-align:center;padding:9px"><span class="blue b">일일 점검 · 모니터링</span></div>
+      <div class="small muted" style="text-align:center;margin:6px 0 10px">“문제가 커지기 전에 먼저 확인합니다”</div>
+      <div class="li"><span class="num">1</span><span class="small">DB·배치 서버 프로세스 구동 확인</span></div>
+      <div class="li"><span class="num">2</span><span class="small">서버 CPU·메모리·디스크 사용량 점검</span></div>
+      <div class="li"><span class="num">3</span><span class="small">JENNIFER로 응답 시간·에러 트랜잭션 확인</span></div>
+      <div class="li"><span class="num">4</span><span class="small">이상 징후를 담당자와 즉시 공유</span></div>
+    </div>
+    <div class="col">
+      <div class="box" style="border-color:var(--blue);text-align:center;padding:9px"><span class="blue b">코드 품질 · 문서화</span></div>
+      <div class="small muted" style="text-align:center;margin:6px 0 10px">“배운 것은 팀의 자산으로 남깁니다”</div>
+      <div class="li"><span class="num">1</span><span class="small">코드리뷰 체크리스트 수립</span></div>
+      <div class="li"><span class="num">2</span><span class="small">Null·예외·트랜잭션, SQL 인젝션 방지 점검</span></div>
+      <div class="li"><span class="num">3</span><span class="small">리팩토링 가이드 문서화 및 팀 공유</span></div>
+      <div class="li"><span class="num">4</span><span class="small">개발목록 관리대장 업데이트, PL 보고</span></div>
+    </div>
+  </div>
+  <div class="gbox small" style="margin-top:14px"><span class="b">주요 SR</span> &nbsp;관리자 저장 안내 메시지 기능 추가 · 법령정보 게시판 첨부파일 다운로드 경로 긴급 수정 · 뷰어 다운로드 URL 오류 수정·배포</div>
+  <div class="foot"><span>이미르 · Portfolio</span><span>11</span></div>
+</section>
+
+<!-- 12. Tech Stack -->
+<section class="slide">
+  <div class="eyebrow">Tech Stack</div>
+  <div class="title">세 가지 강점을 뒷받침하는 기술들입니다</div>
+  <div class="row" style="gap:20px">
+    <div class="col">
+      <div class="bbar">AI 솔루션</div>
+      <div class="box" style="border-top:0;min-height:300px">
+        <div class="small muted b">LLM · 검색</div><div><span class="chipb">Claude API</span><span class="chipb">OpenAI API</span><span class="chipb">RAG</span><span class="chipb">Elasticsearch</span></div>
+        <div class="small muted b" style="margin-top:12px">모델 · 데이터</div><div><span class="chip">Sentence-Transformers</span><span class="chip">KLUE-BERT</span><span class="chip">DPR</span><span class="chip">TensorFlow</span><span class="chip">Pandas</span><span class="chip">NumPy</span></div>
+        <div class="small muted b" style="margin-top:12px">연동 · 처리</div><div><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">ThreadPoolExecutor</span><span class="chip">Webhook</span></div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="bbar">풀스택 개발</div>
+      <div class="box" style="border-top:0;min-height:300px">
+        <div class="small muted b">Backend</div><div><span class="chipb">Java</span><span class="chipb">Spring Boot</span><span class="chipb">Spring Security</span><span class="chip">JWT</span><span class="chip">OAuth2</span></div>
+        <div class="small muted b" style="margin-top:12px">Frontend</div><div><span class="chipb">React</span><span class="chip">JavaScript</span><span class="chip">Zustand</span></div>
+        <div class="small muted b" style="margin-top:12px">Real-time</div><div><span class="chip">WebRTC</span><span class="chip">WebSocket</span><span class="chip">STOMP/SockJS</span></div>
+        <div class="small muted b" style="margin-top:12px">Infra</div><div><span class="chip">Docker</span><span class="chip">AWS(EC2, S3, DynamoDB)</span><span class="chip">Git</span><span class="chip">GitHub Actions</span></div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="bbar">운영 · 유지보수</div>
+      <div class="box" style="border-top:0;min-height:300px">
+        <div class="small muted b">Framework</div><div><span class="chipb">전자정부프레임워크</span><span class="chipb">JSP</span><span class="chipb">MyBatis</span></div>
+        <div class="small muted b" style="margin-top:12px">Database</div><div><span class="chipb">Tibero</span><span class="chip">Oracle</span><span class="chip">MySQL</span><span class="chip">SQLD</span></div>
+        <div class="small muted b" style="margin-top:12px">운영 도구</div><div><span class="chipb">JENNIFER (APM)</span><span class="chip">SoftManager</span><span class="chip">Linux</span><span class="chip">SVN</span><span class="chip">Jenkins</span></div>
+        <div class="small muted b" style="margin-top:12px">보안 · 인증</div><div><span class="chip">SSL/TLS 인증서</span><span class="chip">웹 접근성(KWCAG)</span><span class="chip">웹 취약점 조치</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>이미르 · Portfolio</span><span>12</span></div>
+</section>
+
+<!-- 13. 포부 -->
+<section class="slide">
+  <div class="eyebrow">저의 포부</div>
+  <div class="title">어떤 자리에서든, 만든 것이 현장에서 끝까지 동작하도록<br>개발하고, 연결하고, 지키는 엔지니어가 되겠습니다</div>
+  <table class="t" style="font-size:14px">
+    <tr><th style="width:170px">직무</th><th style="width:420px">빠른 적응과 현장 안착</th><th>경험을 팀의 자산으로</th></tr>
+    <tr><td class="k blue">AI 솔루션</td><td>적용 조직의 업무 정책·지식·연동 시스템을 빠르게 이해하고, AI가 정확히 쓸 수 있는 형태로 연결</td><td>적용하며 마주친 문제를 공통 모듈·설정 기반 구조로 정리해 다음 적용 시간을 줄이기</td></tr>
+    <tr><td class="k blue">풀스택 개발</td><td>요구사항을 기술 요건으로 정리하고, 백엔드부터 화면까지 책임지고 완성</td><td>인증·상태 관리·동시성처럼 반복되는 문제의 해법을 코드와 문서로 남기기</td></tr>
+    <tr><td class="k blue">운영·유지보수</td><td>운영 절차와 통제를 지키며 SR을 정확하고 빠르게 처리</td><td>점검 체크리스트와 리팩토링 가이드를 꾸준히 개선해 장애를 미리 줄이기</td></tr>
+  </table>
+  <div style="text-align:center;font-weight:700;font-size:17px;margin-top:40px">“기능을 만드는 것에서 멈추지 않고, <span class="blue">현장에서 안정적으로 쓰이는 순간까지</span> 책임지는 개발자가 되겠습니다”</div>
+  <div class="foot"><span>이미르 · Portfolio</span><span>13</span></div>
+</section>
+
+<!-- 14. Appendix 경험 -->
+<section class="slide">
+  <div class="eyebrow">Appendix. 주요 경험 수행 목록</div>
+  <div class="title">업무 현장과 팀 프로젝트에서, 웹·AI·운영 시스템을<br>직접 만들고 운영해 본 경험이 있습니다</div>
+  <div class="grid">
+    <div class="ap"><div class="apb"><div class="b">올포랜드 | 금융정보분석원 정보시스템 유지보수</div><ul class="dot small"><li>대민 재정정보 게시판 서버 페이징 전환</li><li>SSL 인증서 교체 · 웹 접근성(WA) 인증 대응</li><li>보안 조치 · SR 처리 · JENNIFER 일일 점검</li></ul></div><div class="apd">2026.09<br>– 현재</div></div>
+    <div class="ap"><div class="apb"><div class="b">올림플래닛 | 입찰공고 AI 판정 시스템</div><ul class="dot small"><li>Claude 기반 판정 파이프라인 구축·운영</li><li>병렬화로 88초 → 13초, 수작업 확인 대체</li></ul></div><div class="apd">2026.05<br>– 2026.07</div></div>
+    <div class="ap"><div class="apb"><div class="b">선견지표 | 선거 정보·모의투표 플랫폼</div><ul class="dot small"><li>Elasticsearch 하이브리드 RAG 챗봇</li><li>OAuth2+JWT 인증 · Web3j 하이브리드 투표 · 최우수상</li></ul></div><div class="apd">2025.04<br>– 2025.05</div></div>
+    <div class="ap"><div class="apb"><div class="b">TechX 그룹웨어 | 실시간 협업 플랫폼</div><ul class="dot small"><li>WebRTC Mesh 화상회의 · 시그널링 서버</li><li>토큰 분리 인증 · 예약 동시성 제어</li></ul></div><div class="apd">2025.04<br>– 2025.05</div></div>
+    <div class="ap"><div class="apb"><div class="b">캡스톤 | 시맨틱 위치정보 추정</div><ul class="dot small"><li>POI 데이터·학습 쌍 구축, DPR 모델 학습</li><li>지도 시각화 클라이언트 개발 · 우수상</li></ul></div><div class="apd">2023.09<br>– 2023.12</div></div>
+    <div class="ap"><div class="apb"><div class="b">셈스게임즈 | IoT 센서 데이터 대시보드</div><ul class="dot small"><li>수집·전송 프로세스 Multiprocessing 분리</li><li>센서 데이터 적재 누락 0건</li></ul></div><div class="apd">2023.03<br>– 2023.12</div></div>
+  </div>
+  <style>.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px}.ap{display:flex;background:var(--lb);min-height:104px}.apb{flex:1;padding:12px 16px}.apb ul{margin-top:6px}.apd{width:110px;flex:none;background:var(--blue);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;text-align:center}</style>
+  <div class="foot"><span>이미르 · Portfolio</span><span>14</span></div>
+</section>
+
+<!-- 15. Appendix 학력·수상·자격 -->
+<section class="slide">
+  <div class="eyebrow">Appendix. 학력 · 교육 · 수상 · 자격</div>
+  <div class="title">기초를 다진 과정과 그 결과입니다</div>
+  <div class="row" style="gap:30px">
+    <div class="col">
+      <div class="sec">학력 · 교육</div>
+      <table class="t" style="font-size:13px">
+        <tr><td style="width:130px">2019.03 – 2024.02</td><td><span class="b">전북대학교 IT정보공학과 학사 졸업</span> · 3.35 / 4.5</td></tr>
+        <tr><td>2024.11 – 2025.05</td><td>KDT 클라우드 활용 풀스택 개발 과정 수료</td></tr>
+        <tr><td>2024.01</td><td>AWS DeepRacer 자율주행 강화학습 동계 캠프</td></tr>
+        <tr><td>2022.08 – 2022.11</td><td>전북대 CV연구실 학부연구 (중기부 R&amp;D 과제)</td></tr>
+        <tr><td>2022.04 – 2022.12</td><td>한이음 ICT 멘토링 프로젝트</td></tr>
+        <tr><td>2022.01 – 2022.09</td><td>42 SEOUL 본과정</td></tr>
+        <tr><td>2022.08</td><td>AWS Technical Essentials 수료</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <div class="sec">수상</div>
+      <table class="t" style="font-size:13px">
+        <tr><td style="width:80px">2025.05</td><td><span class="b blue">최우수상</span> KDT 풀스택 개발 프로젝트 '선견지표'</td></tr>
+        <tr><td>2023.12</td><td><span class="b blue">우수상</span> SW캡스톤디자인 경진대회</td></tr>
+        <tr><td>2023.12</td><td><span class="b blue">장려상</span> 제1회 SW 창업 아이디어 경진대회</td></tr>
+        <tr><td>2020.12</td><td><span class="b blue">동상</span> IT정보공학과 설계작품경진대회</td></tr>
+      </table>
+      <div class="sec" style="margin-top:22px">자격</div>
+      <table class="t" style="font-size:13px">
+        <tr><td style="width:80px">2021.04</td><td><span class="b">SQLD</span> (SQL 개발자) · 한국데이터산업진흥원</td></tr>
+        <tr><td>2026.02</td><td><span class="b">OPIc IM2</span> (영어) · ACTFL</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="foot"><span>이미르 · Portfolio</span><span>15</span></div>
+</section>
+
+<!-- 16. Thanks -->
+<section class="slide" style="display:flex;flex-direction:column;align-items:center;justify-content:center">
+  <div style="font-size:42px;font-weight:700">감사합니다</div>
+  <div class="muted" style="font-size:16px;margin-top:14px">만든 것이 현장에서 끝까지 동작하도록, 개발하고 연결하고 지키는 일을 하고 싶습니다.</div>
+  <div class="gbox b" style="margin-top:40px;padding:18px 32px;font-size:15px">mileui73@gmail.com &nbsp;·&nbsp; 010-4850-5772 &nbsp;·&nbsp; github.com/lalala5772</div>
+</section>
+
+</body>
+</html>
